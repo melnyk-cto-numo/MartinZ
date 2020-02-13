@@ -20,6 +20,7 @@ html, body {
   top:     84rem;
   left:    0;
   z-index: 0;
+  width:   100%;
 }
 
 .pink-up {
@@ -74,24 +75,35 @@ html, body {
         margin-top:  0;
       }
     }
-    .seven-keys {
-      width:         44.61538462%;
-      margin-bottom: 4rem;
-      h1 {
-        display:       inline-block;
-        font-style:    normal;
-        font-weight:   900;
-        font-size:     1.875rem;
-        line-height:   28px;
-        color:         #250250;
-        margin-top:    0;
-        margin-bottom: 0;
-        span {
-          font-style:  normal;
-          font-weight: 900;
-          font-size:   40px;
-          line-height: 28px;
-          color:       #250250;
+    .sevenKeys {
+      display:  flex;
+      position: relative;
+      &__img {
+        width:    55.4%;
+        position: absolute;
+        z-index:  0;
+        right:    0;
+        top:      -3rem;
+      }
+      &__inner {
+        width:         44.6%;
+        margin-bottom: 4rem;
+        h1 {
+          display:       inline-block;
+          font-style:    normal;
+          font-weight:   900;
+          font-size:     1.875rem;
+          line-height:   28px;
+          color:         #250250;
+          margin-top:    0;
+          margin-bottom: 0;
+          span {
+            font-style:  normal;
+            font-weight: 900;
+            font-size:   40px;
+            line-height: 28px;
+            color:       #250250;
+          }
         }
       }
     }
