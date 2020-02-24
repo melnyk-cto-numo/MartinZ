@@ -591,6 +591,7 @@ a {
       .inform__inner {
         margin-left: 4rem;
         .data {
+          margin-bottom: 4rem;
           h3 {
             font-weight: 900;
             font-size:   3rem;
@@ -602,12 +603,14 @@ a {
           }
         }
         .price {
-          width: 40%;
+          width:         40%;
+          margin-bottom: 4rem;
         }
         .organization {
-          order:       3;
-          align-items: flex-start;
-          width:       60%;
+          order:         3;
+          align-items:   flex-start;
+          width:         60%;
+          margin-bottom: 4rem;
           h3 {
             text-align: left;
             color:      $whiteColor;
