@@ -30,7 +30,7 @@ a {
 }
 
 .container {
-  width:    86.666667%;
+  width:    92%;
   margin:   0 auto;
   position: relative;
 }
@@ -267,73 +267,72 @@ a {
       }
     }
   }
-  .data {
-    width:         100%;
-    display:       flex;
-    margin-bottom: 6.75rem;
-    &__inner {
-      width: 70.1538%;
+  .inform {
+    .inform__inner {
+      display:   flex;
+      flex-wrap: wrap;
+      div {
+        margin-bottom: 2rem;
+      }
+      div:nth-child(even) {
+        align-items: flex-end;
+        h3 {
+          text-align: right;
+        }
+        p {
+          text-align: right;
+        }
+      }
       h3 {
-        font-weight:   bold;
-        font-size:     1.5rem;
-        line-height:   1.875rem;
-        color:         $whiteColor;
-        width:         50%;
-        margin-bottom: 0.2rem;
+        font-weight: bold;
+        font-size:   1.5rem;
+        line-height: 1.875rem;
+        color:       $mainColor;
+        margin:      0;
       }
       p {
-        font-size:   1.25rem;
-        line-height: 1.5625rem;
-        color:       $whiteColor;
+        font-size:   1.125rem;
+        line-height: 1.5rem;
+        color:       $mainColor;
         margin:      0;
-        span {
+      }
+      .data {
+        width:          100%;
+        display:        flex;
+        flex-direction: column;
+        margin-bottom:  6.75rem;
+        h3 {
+          color: $whiteColor;
+        }
+        p {
+          color: $whiteColor;
+        }
+        .p__inner {
           font-weight: 300;
           font-size:   1rem;
           line-height: 1.25rem;
           color:       $whiteColor;
         }
       }
-    }
-  }
-  .place {
-    display:         flex;
-    justify-content: flex-end;
-    width:           100%;
-    margin-bottom:   1.3125rem;
-    &__inner {
-      width: 73.84615%;
-      h3 {
-        font-weight: bold;
-        font-size:   1.5rem;
-        line-height: 1.5rem;
-        text-align:  right;
-        color:       $mainColor;
+      .place {
+        display:        flex;
+        width:          100%;
+        margin-bottom:  1.3125rem;
+        flex-direction: column;
+        h3 {
+          display:        flex;
+          flex-direction: column;
+        }
       }
-      p {
-        font-size:   1.125rem;
-        line-height: 1.5rem;
-        text-align:  right;
-        color:       $mainColor;
+      .organization {
+        display:        flex;
+        width:          100%;
+        flex-direction: column;
       }
-    }
-  }
-  .organization {
-    display: flex;
-    width:   100%;
-    &__inner {
-      h3 {
-        text-align: left;
-      }
-    }
-  }
-  .price {
-    width:           100%;
-    display:         flex;
-    justify-content: flex-end;
-    &__inner {
-      align-items: flex-end;
-      h3 {
-        text-align: right;
+      .price {
+        width:          100%;
+        display:        flex;
+        flex-direction: column;
       }
     }
   }
@@ -458,6 +457,80 @@ a {
         }
       }
     }
+    .inform {
+      .inform__inner {
+        div:nth-child(even) {
+          align-items: flex-start;
+          h3 {
+            text-align: left;
+          }
+          p {
+            text-align: left;
+          }
+        }
+        h3 {
+          font-weight: bold;
+          font-size:   2.25rem;
+          line-height: 2.5rem;
+          color:       $whiteColor;
+        }
+        p {
+          font-size:   1.5rem;
+          line-height: 2.5rem;
+          color:       $whiteColor;
+        }
+        .data {
+          order:         1;
+          margin-bottom: 1.625rem;
+          h3 {
+            margin-bottom: 1.25rem;
+            span {
+              display: block;
+            }
+          }
+          p {
+            font-size:   1.875rem;
+            line-height: 1.75rem;
+            color:       $whiteColor;
+          }
+          .p__inner {
+            font-weight: 300;
+            font-size:   1.25rem;
+            line-height: 2.5rem;
+            color:       $whiteColor;
+          }
+        }
+        .price {
+          order:         2;
+          margin-bottom: 2rem;
+        }
+        .place {
+          width: 50%;
+          order: 3;
+          h3 {
+            display: inline-block;
+          }
+          p {
+            padding-right: 4.375rem;
+          }
+        }
+        .organization {
+          justify-content: center;
+          align-items:     center;
+          order:           4;
+          width:           50%;
+          h3 {
+            text-align: center;
+            color:      $mainColor;
+          }
+          p {
+            font-size:   1.125rem;
+            line-height: 1.875rem;
+            color:       $mainColor;
+          }
+        }
+      }
+    }
   }
   .footer {
     padding: 0 0 1rem;
@@ -496,6 +569,7 @@ a {
       }
     }
     .seminar {
+      margin-bottom: 4.9375rem;
       .seminar__inner {
         .heading {
           &__inner {
@@ -510,6 +584,44 @@ a {
               font-size: 1.875rem;
             }
           }
+        }
+      }
+    }
+    .inform {
+      .inform__inner {
+        margin-left: 4rem;
+        .data {
+          h3 {
+            font-weight: 900;
+            font-size:   3rem;
+            line-height: 3.75rem;
+            color:       $whiteColor;
+            span {
+              display: inline-block;
+            }
+          }
+        }
+        .price {
+          width: 40%;
+        }
+        .organization {
+          order:       3;
+          align-items: flex-start;
+          width:       60%;
+          h3 {
+            text-align: left;
+            color:      $whiteColor;
+          }
+          p {
+            text-align:  left;
+            color:       $whiteColor;
+            font-size:   1.5rem;
+            line-height: 2.5rem;
+          }
+        }
+        .place {
+          order: 4;
+          width: 100%;
         }
       }
     }
