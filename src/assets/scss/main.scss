@@ -104,37 +104,11 @@ a {
   position:       relative;
   display:        flex;
   flex-direction: column;
-  .inner {
-    display:        flex;
-    width:          86.76923077%;
-    flex-direction: column;
-    h3 {
-      font-weight:   bold;
-      font-size:     1.5rem;
-      line-height:   1.875rem;
-      color:         $mainColor;
-      margin-bottom: 0;
-    }
-    p {
-      font-size:   1.125rem;
-      line-height: 1.875rem;
-      color:       $mainColor;
-      margin-top:  0;
-    }
-  }
   .sevenKeys {
-    display:  flex;
-    position: relative;
-    &__img {
-      width:    55.4%;
-      position: absolute;
-      z-index:  0;
-      right:    0;
-      top:      -3rem;
-    }
-    &__inner {
-      width:         44.6%;
-      margin-bottom: 4rem;
+    .sevenKeys__inner {
+      display:        flex;
+      position:       relative;
+      flex-direction: column;
       h1 {
         display:       inline-block;
         font-style:    normal;
@@ -143,7 +117,8 @@ a {
         line-height:   28px;
         color:         $mainColor;
         margin-top:    0;
-        margin-bottom: 0;
+        width:         50%;
+        margin-bottom: 4rem;
         span {
           font-style:  normal;
           font-weight: 900;
@@ -152,30 +127,36 @@ a {
           color:       $mainColor;
         }
       }
-    }
-  }
-  .improvements {
-    display:         flex;
-    justify-content: flex-end;
-    width:           100%;
-    &__inner {
-      width: 61.2307%;
-      h3 {
-        font-weight:   bold;
-        font-size:     1.25rem;
-        line-height:   1.25rem;
-        text-align:    right;
-        color:         $whiteColor;
-        margin-bottom: 0;
-        margin-top:    0;
+      .desktop {
+        display: none;
       }
-      p {
-        text-align:  right;
-        font-weight: 300;
-        font-size:   0.875rem;
-        line-height: 0.875rem;
-        color:       $whiteColor;
-        margin-top:  0;
+      .improvements {
+        width:          100%;
+        display:        flex;
+        flex-direction: column;
+        align-items:    flex-end;
+        &__inner {
+          width: 12.5rem;
+          h3 {
+            text-align:  right;
+            margin:      0;
+            font-weight: bold;
+            font-size:   1.25rem;
+            line-height: 1.25rem;
+            color:       $whiteColor;
+          }
+          p {
+            text-align:  right;
+            margin:      0;
+            font-weight: 300;
+            font-size:   0.875rem;
+            line-height: 0.875rem;
+            color:       $whiteColor;
+          }
+        }
+      }
+      a {
+        display: none;
       }
     }
   }
@@ -231,7 +212,7 @@ a {
     display:       flex;
     width:         100%;
     margin-bottom: 10rem;
-    &__inner {
+    .leading__inner {
       display:        flex;
       flex-direction: column;
       align-items:    center;
@@ -397,6 +378,52 @@ a {
     }
   }
   .main {
+    .sevenKeys {
+      margin-bottom: 6rem;
+      .sevenKeys__inner {
+        h1 {
+          font-weight:   900;
+          font-size:     4rem;
+          line-height:   4.6875rem;
+          color:         $mainColor;
+          width:         40%;
+          margin-bottom: 9.1875rem;
+          span {
+            font-weight: 900;
+            font-size:   6rem;
+            line-height: 7rem;
+            color:       $mainColor;
+          }
+        }
+        .improvements {
+          &__inner {
+            width: 31rem;
+            h3 {
+              font-size:   2.25rem;
+              line-height: 3rem;
+            }
+            p {
+              font-size:   1.6875rem;
+              line-height: 2.5rem;
+            }
+          }
+        }
+        a {
+          display:  flex;
+          position: absolute;
+          bottom:   -10rem;
+          right:    0;
+          width:    15rem;
+          h5 {
+            font-weight: bold;
+            font-size:   1.5rem;
+            line-height: 1.875rem;
+            text-align:  right;
+            color:       $whiteColor;
+          }
+        }
+      }
+    }
     .leading {
       &__inner {
         h2 {
@@ -555,6 +582,57 @@ a {
 
 @media screen and(min-width: 1440px) {
   .main {
+    .sevenKeys {
+      margin-bottom: 15.6875rem;
+      .sevenKeys__inner {
+        h1 {
+          font-weight:   900;
+          font-size:     6rem;
+          line-height:   7rem;
+          color:         $mainColor;
+          width:         40%;
+          margin-bottom: 0;
+          span {
+            font-weight: 900;
+            color:       $mainColor;
+            font-size:   9rem;
+            line-height: 10.5625rem;
+            text-align:  center;
+          }
+        }
+        .desktop {
+          display:       inline;
+          font-weight:   300;
+          font-size:     1.875rem;
+          line-height:   1.875rem;
+          color:         $mainColor;
+          margin-bottom: 12.75rem;
+        }
+        .improvements {
+          padding-right: 8rem;
+          &__inner {
+            width: 42.5rem;
+            h3 {
+              font-size:   3rem;
+              line-height: 3.125rem;
+            }
+            p {
+              font-size:   2.25rem;
+              line-height: 3.125rem;
+            }
+          }
+        }
+        a {
+          width:  19.75rem;
+          right:  8rem;
+          bottom: -15rem;
+          h5 {
+            font-size:   2.25rem;
+            line-height: 2.5rem;
+          }
+        }
+      }
+    }
     .leading {
       &__inner {
         margin-left: 36.3%;
