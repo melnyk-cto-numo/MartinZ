@@ -61,7 +61,7 @@ a {
 }
 
 .pink-up {
-  top:     4rem;
+  top:     0;
   right:   0;
   z-index: 0;
   width:   100%;
@@ -710,6 +710,7 @@ a {
             justify-content: space-between;
             p {
               font-size: 1.875rem;
+              width:     100%;
             }
           }
           img {
