@@ -179,37 +179,50 @@ a {
       }
     }
   }
-  .video {
-    margin-bottom: 1.5625rem;
-    img {
-      width: 100%;
-    }
-  }
   .seminar {
-    display: flex;
-    &__inner {
-      width: 56.6153%;
-      h2 {
-        font-weight: bold;
-        font-size:   30px;
-        line-height: 30px;
-        color:       $mainColor;
+    .seminar__inner {
+      display:        flex;
+      flex-direction: column;
+      align-items:    center;
+      .heading {
+        display: flex;
+        width:   100%;
+        &__inner {
+          width: 56.6153%;
+          h2 {
+            font-weight: bold;
+            font-size:   1.875rem;
+            line-height: 1.875rem;
+            color:       $mainColor;
+          }
+        }
       }
-    }
-  }
-  .reasons {
-    display: flex;
-    &__inner {
-      width:       100%;
-      padding-top: 1.125rem;
-      p {
-        margin-top:    0;
-        margin-bottom: 2.5rem;
-        font-size:     1.125rem;
-        line-height:   1.25rem;
-        color:         $mainColor;
-        &:last-child {
-          margin-bottom: 0;
+      .reasons {
+        display:       flex;
+        margin-bottom: 1.5rem;
+        width:         100%;
+        &__inner {
+          width:       100%;
+          padding-top: 1.125rem;
+          p {
+            margin-top:    0;
+            margin-bottom: 2.5rem;
+            font-size:     1.125rem;
+            line-height:   1.25rem;
+            color:         $mainColor;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+      .btn-registration {
+        margin-bottom: 3.3125rem;
+      }
+      .video {
+        margin-bottom: 1.5625rem;
+        img {
+          width: 100%;
         }
       }
     }
@@ -406,6 +419,45 @@ a {
         }
       }
     }
+    .seminar {
+      .seminar__inner {
+        flex-direction:  row;
+        flex-wrap:       wrap;
+        justify-content: space-between;
+        .video {
+          order:         1;
+          width:         50%;
+          margin-bottom: 4.5rem;
+        }
+        .btn-registration {
+          order: 2;
+        }
+        .heading {
+          order: 3;
+          &__inner {
+            width: 58%;
+            h2 {
+              margin-top:  0;
+              font-style:  normal;
+              font-weight: 900;
+              font-size:   3rem;
+              line-height: 3.6875rem;
+            }
+          }
+        }
+        .reasons {
+          order: 4;
+          .reasons__inner {
+            p {
+              font-style:  normal;
+              font-weight: normal;
+              font-size:   1.5rem;
+              line-height: 2.25rem;
+            }
+          }
+        }
+      }
+    }
   }
   .footer {
     padding: 0 0 1rem;
@@ -439,6 +491,24 @@ a {
           img {
             margin-right: 4rem;
             width:        15rem;
+          }
+        }
+      }
+    }
+    .seminar {
+      .seminar__inner {
+        .heading {
+          &__inner {
+            width:       60%;
+            margin-left: 4rem;
+          }
+        }
+        .reasons {
+          margin-left: 4rem;
+          .reasons__inner {
+            p {
+              font-size: 1.875rem;
+            }
           }
         }
       }
