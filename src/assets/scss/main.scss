@@ -147,10 +147,10 @@ a {
           position: relative;
           width:    12.5rem;
           img {
-            width:    100%;
+            width:    80%;
             position: absolute;
-            right:    -1.5rem;
-            top:      -10rem;
+            right:    -0.5rem;
+            top:      -8rem;
           }
           h3 {
             text-align:  right;
@@ -206,15 +206,26 @@ a {
         img {
           display: none;
         }
-        &__inner {
+        ul {
           width:       100%;
           padding-top: 1.125rem;
-          p {
+          li {
+            position:      relative;
+            list-style:    none;
             margin-top:    0;
             margin-bottom: 2.5rem;
             font-size:     1.125rem;
             line-height:   1.25rem;
             color:         $mainColor;
+            &:before {
+              content:          "";
+              height:           0.12rem;
+              width:            1rem;
+              background-color: $mainColor;
+              position:         absolute;
+              top:              50%;
+              left:             -1.5rem;
+            }
             &:last-child {
               margin-bottom: 0;
             }
@@ -595,8 +606,8 @@ a {
         }
         .reasons {
           order: 4;
-          .reasons__inner {
-            p {
+          ul {
+            li {
               font-style:  normal;
               font-weight: normal;
               font-size:   1.5rem;
@@ -851,15 +862,18 @@ a {
             img {
               display: none;
             }
+            h2 {
+              width: 100%;
+            }
           }
         }
         .reasons {
           margin-left: 4rem;
-          .reasons__inner {
+          ul {
             display:         flex;
             flex-wrap:       wrap;
             justify-content: space-between;
-            p {
+            li {
               font-size: 1.875rem;
               width:     100%;
             }
