@@ -18,6 +18,7 @@ html, body {
   padding:          0;
   font-family:      Roboto, sans-serif;
   background-color: #ffded7;
+  overflow-x:       hidden;
 }
 
 section {
@@ -53,18 +54,16 @@ a {
   position: absolute;
 }
 
-.pink-down {
-  top:     0;
-  left:    0;
-  z-index: 0;
-  width:   100%;
-}
-
-.pink-up {
-  top:     0;
-  right:   0;
-  z-index: 0;
-  width:   100%;
+.body {
+  position: relative;
+  overflow: hidden;
+  .birdBottom {
+    position: absolute;
+    z-index:  1;
+    bottom:   23%;
+    right:    4.5%;
+    display:  none;
+  }
 }
 
 .header {
@@ -105,10 +104,9 @@ a {
   display:        flex;
   flex-direction: column;
   .sevenKeys {
-    margin-bottom: 2.25rem;
+    margin-bottom: 2.5rem;
     .sevenKeys__inner {
       display:        flex;
-      position:       relative;
       flex-direction: column;
       h1 {
         display:       inline-block;
@@ -118,8 +116,9 @@ a {
         line-height:   28px;
         color:         $mainColor;
         margin-top:    0;
-        width:         50%;
-        margin-bottom: 4rem;
+        width:         10rem;
+        margin-bottom: 2rem;
+        position:      relative;
         span {
           font-style:  normal;
           font-weight: 900;
@@ -129,15 +128,30 @@ a {
         }
       }
       .desktop {
-        display: none;
+        display:  none;
+        position: relative;
       }
       .improvements {
         width:          100%;
+        position:       relative;
         display:        flex;
         flex-direction: column;
         align-items:    flex-end;
+        .pink-up {
+          top:     -9rem;
+          right:   -7%;
+          z-index: 0;
+          width:   110%;
+        }
         &__inner {
-          width: 12.5rem;
+          position: relative;
+          width:    12.5rem;
+          img {
+            width:    100%;
+            position: absolute;
+            right:    -1.5rem;
+            top:      -10rem;
+          }
           h3 {
             text-align:  right;
             margin:      0;
@@ -223,6 +237,7 @@ a {
     width:         100%;
     margin-bottom: 10rem;
     .leading__inner {
+      position:       relative;
       display:        flex;
       flex-direction: column;
       align-items:    center;
@@ -255,6 +270,13 @@ a {
             color:       $mainColor;
           }
         }
+      }
+      .bear {
+        position:  absolute;
+        bottom:    -11rem;
+        right:     2rem;
+        width:     30%;
+        max-width: 10rem;
       }
     }
   }
@@ -293,17 +315,37 @@ a {
         display:        flex;
         flex-direction: column;
         margin-bottom:  6.75rem;
+        position:       relative;
+        .pink-down {
+          top:     -8rem;
+          left:    -5%;
+          z-index: 0;
+          width:   18rem
+        }
+        .cupidon {
+          position: absolute;
+          width:    7rem;
+          z-index:  1;
+          top:      6rem;
+          //transform: rotate(24.47deg);
+        }
         h3 {
-          color: $whiteColor;
+          color:    $whiteColor;
+          position: relative;
+          span {
+            display: block;
+          }
         }
         p {
-          color: $whiteColor;
+          color:    $whiteColor;
+          position: relative;
         }
         .p__inner {
           font-weight: 300;
           font-size:   1rem;
           line-height: 1.25rem;
           color:       $whiteColor;
+          position:    relative;
         }
       }
       .place {
@@ -311,6 +353,7 @@ a {
         width:          100%;
         margin-bottom:  1.3125rem;
         flex-direction: column;
+        position:       relative;
         h3 {
           display:        flex;
           flex-direction: column;
@@ -320,11 +363,13 @@ a {
         display:        flex;
         width:          100%;
         flex-direction: column;
+        position:       relative;
       }
       .price {
         width:          100%;
         display:        flex;
         flex-direction: column;
+        position:       relative;
       }
     }
   }
@@ -381,8 +426,45 @@ a {
   }
 }
 
-@media screen and(min-width: 834px) {
+@media screen and(min-width: 375px) {
+  .main {
+    .sevenKeys {
+      margin-bottom: 2.5rem;
+      .sevenKeys__inner {
+        display:        flex;
+        flex-direction: column;
+        h1 {
+          margin-bottom: 4rem;
+        }
+        .improvements {
+          .pink-up {
+            top:     -11.5rem;
+            right:   -5%;
+            z-index: 0;
+            width:   26rem;
+          }
+          &__inner {
+            position: relative;
+            width:    12.5rem;
+            img {
+              width:    100%;
+              position: absolute;
+              right:    0;
+              top:      -10rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
+@media screen and(min-width: 834px) {
+  .body {
+    .birdBottom {
+      display: block;
+    }
+  }
   .header {
     .menu {
       margin-left: 10%;
@@ -412,8 +494,16 @@ a {
           }
         }
         .improvements {
+          .pink-up {
+            top:   -27rem;
+            width: 60rem;
+          }
           &__inner {
             width: 31rem;
+            .sevenKeys__img {
+              width: 80%;
+              top:   -25rem;
+            }
             h3 {
               font-size:   2.25rem;
               line-height: 3rem;
@@ -443,6 +533,12 @@ a {
     .leading {
       margin-bottom: 20rem;
       .leading__inner {
+        .bear {
+          width:     15rem;
+          max-width: 30rem;
+          right:     30%;
+          bottom:    -15rem;
+        }
         h2 {
           font-weight: 900;
           font-size:   3rem;
@@ -536,6 +632,14 @@ a {
         .data {
           order:         1;
           margin-bottom: 1.625rem;
+          .pink-down {
+            top:   -15rem;
+            width: 41rem;
+          }
+          .cupidon {
+            top:   -12rem;
+            width: 10rem;
+          }
           h3 {
             margin-bottom: 1.25rem;
             span {
@@ -598,6 +702,9 @@ a {
       width:     calc(100% / 3);
       max-width: 600px;
     }
+    &:after {
+      display: none;
+    }
     .contacts {
       text-align: center;
       h3 {
@@ -607,8 +714,38 @@ a {
   }
 }
 
+@media screen and(min-width: 1030px) {
+  .main {
+    .sevenKeys {
+      .sevenKeys__inner {
+        .improvements {
+          .pink-up {
+            top: -27rem;
+          }
+        }
+      }
+    }
+    .inform {
+      .inform__inner {
+        .data {
+          .pink-down {
+            top:   -21rem;
+            width: 48rem;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and(min-width: 1440px) {
+  .body {
+    .birdBottom {
+      bottom: 12%;
+    }
+  }
   .header {
+    margin-bottom: 10rem;
     .menu {
       ul {
         li {
@@ -653,8 +790,16 @@ a {
         }
         .improvements {
           padding-right: 8rem;
+          .pink-up {
+            top:   -45rem;
+            width: 90rem;
+          }
           &__inner {
             width: 42.5rem;
+            .sevenKeys__img {
+              width: 100%;
+              top:   -38rem;
+            }
             h3 {
               font-size:   3rem;
               line-height: 3.125rem;
@@ -687,6 +832,12 @@ a {
             margin-right: 4rem;
             width:        15rem;
           }
+        }
+        .bear {
+          bottom:    -20rem;
+          width:     20rem;
+          max-width: 30rem;
+          left:      30%;
         }
       }
     }
@@ -726,6 +877,15 @@ a {
         margin-left: 4rem;
         .data {
           margin-bottom: 4rem;
+          .pink-down {
+            left:  -10%;
+            top:   -35rem;
+            width: 90%;
+          }
+          .cupidon {
+            top:   -28rem;
+            width: 20rem;
+          }
           h3 {
             font-weight: 900;
             font-size:   3rem;
