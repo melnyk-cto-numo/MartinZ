@@ -5,6 +5,13 @@
   .header .menu ul li a:hover {
     color: #ed4c5b;
   }
+  .btn-registration:hover {
+    border:           0.15rem solid $whiteColor;
+    background-color: $whiteColor;
+    &:after {
+      height: 3.18rem;
+    }
+  }
 }
 
 * {
@@ -41,13 +48,36 @@ a {
   height:          3.176rem;
   background:      $mainColor;
   border-radius:   6.25rem;
-  border:          none;
+  border:          0.15rem solid $mainColor;
   font-size:       1.25rem;
   color:           $whiteColor;
   text-align:      center;
   display:         flex;
   align-items:     center;
   justify-content: center;
+  position:        relative;
+  box-sizing:      content-box;
+  z-index:         1;
+  transition:      all linear 0.2s;
+  &:after {
+    content:          '';
+    width:            13rem;
+    height:           0;
+    border-radius:    6.25rem;
+    position:         absolute;
+    background-color: #ec4c5c;
+    z-index:          -1;
+    transition:       height linear 0.2s;
+  }
+  &:active {
+    opacity:          0.7;
+    border:           0.15rem solid $whiteColor;
+    background-color: $whiteColor;
+    &:after {
+      height:     3.18rem;
+      transition: none;
+    }
+  }
 }
 
 .background {
@@ -119,6 +149,19 @@ a {
         width:         10rem;
         margin-bottom: 2rem;
         position:      relative;
+        z-index:       1;
+        &:before {
+          content:          '';
+          width:            1rem;
+          height:           1rem;
+          border-radius:    50%;
+          background-color: #ec4c5c;
+          position:         absolute;
+          z-index:          -1;
+          top:              0;
+          left:             0;
+          animation:        position linear infinite 30s;
+        }
         span {
           font-style:  normal;
           font-weight: 900;
@@ -497,6 +540,10 @@ a {
           color:         $mainColor;
           width:         40%;
           margin-bottom: 9.1875rem;
+          &:before {
+            width:  2rem;
+            height: 2rem;
+          }
           span {
             font-weight: 900;
             font-size:   6rem;
@@ -783,6 +830,10 @@ a {
           color:         $mainColor;
           width:         40%;
           margin-bottom: 0;
+          &:before {
+            width:  3rem;
+            height: 3rem;
+          }
           span {
             font-weight: 900;
             color:       $mainColor;
@@ -936,5 +987,52 @@ a {
         }
       }
     }
+  }
+}
+
+@keyframes position {
+  0% {
+    top:  0;
+    left: 0;
+  }
+  10% {
+    top:  40%;
+    left: 50%;
+  }
+  20% {
+    top:  0;
+    left: 100%;
+  }
+  30% {
+    top:  50%;
+    left: 100%;
+  }
+  40% {
+    top:  100%;
+    left: 50%;
+  }
+  50% {
+    top:  150%;
+    left: 0;
+  }
+  60% {
+    top:  120%;
+    left: 50%;
+  }
+  70% {
+    top:  90%;
+    left: 60%;
+  }
+  80% {
+    top:  60%;
+    left: 40%;
+  }
+  90% {
+    top:  30%;
+    left: 20%;
+  }
+  100% {
+    top:  0;
+    left: 0;
   }
 }
