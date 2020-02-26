@@ -425,6 +425,9 @@ a {
         flex-direction: column;
         position:       relative;
       }
+      .btn-registration__wrapper {
+        display: none;
+      }
     }
   }
 }
@@ -453,30 +456,35 @@ a {
     right:           inherit;
     left:            0;
   }
-  h3 {
-    font-weight:   bold;
-    font-size:     1.5rem;
-    line-height:   1.25rem;
-    text-align:    left;
-    color:         $mainColor;
-    margin-bottom: 0;
+  .btn-registration__wrapper {
+    .btn-registration {
+      margin: 0 auto 3rem auto;
+    }
   }
-  p {
-    font-size:     1.5rem;
-    line-height:   2.375rem;
-    color:         $mainColor;
-    margin-bottom: 0;
-    margin-top:    0;
-  }
-  .facebook {
-    font-size:            1.125rem;
-    line-height:          1.875rem;
-    text-decoration-line: underline;
-    color:                #00A3FF;
-    cursor:               pointer;
-  }
-  .btn-registration {
-    display: none;
+  .contacts {
+    h3 {
+      font-weight:   bold;
+      font-size:     1.5rem;
+      line-height:   1.25rem;
+      text-align:    left;
+      color:         $mainColor;
+      margin-bottom: 1rem;
+      width:         60%;
+    }
+    p {
+      font-size:     1.5rem;
+      line-height:   2.375rem;
+      color:         $mainColor;
+      margin-bottom: 0;
+      margin-top:    0;
+    }
+    .facebook {
+      font-size:            1.125rem;
+      line-height:          1.875rem;
+      text-decoration-line: underline;
+      color:                #00A3FF;
+      cursor:               pointer;
+    }
   }
 }
 
@@ -766,6 +774,7 @@ a {
     .contacts {
       text-align: center;
       h3 {
+        width:      100%;
         text-align: center;
       }
     }
@@ -944,7 +953,7 @@ a {
           margin-bottom: 4rem;
           .pink-down {
             left:  -10%;
-            top:   -35rem;
+            top:   -38rem;
             width: 90%;
           }
           .cupidon {
@@ -982,8 +991,37 @@ a {
           }
         }
         .place {
-          order: 4;
-          width: 100%;
+          order:         4;
+          width:         100%;
+          margin-bottom: 6rem;
+        }
+        .btn-registration__wrapper {
+          display: block;
+          order:   5;
+        }
+      }
+    }
+  }
+  .footer {
+    height: 33rem;
+
+    .btn-registration__wrapper {
+      .btn-registration {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 1830px) {
+  .main {
+    .inform {
+      .inform__inner {
+        .data {
+          .pink-down {
+            top:   -47rem;
+            width: 80%;
+          }
         }
       }
     }
