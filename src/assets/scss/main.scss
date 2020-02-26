@@ -134,7 +134,7 @@ a {
   display:        flex;
   flex-direction: column;
   .sevenKeys {
-    margin-bottom: 2.5rem;
+    margin-bottom: 6rem;
     .sevenKeys__inner {
       display:        flex;
       flex-direction: column;
@@ -184,7 +184,7 @@ a {
           top:     -9rem;
           right:   -7%;
           z-index: 0;
-          width:   110%;
+          width:   120%;
         }
         &__inner {
           position: relative;
@@ -213,8 +213,94 @@ a {
           }
         }
       }
-      a {
-        display: none;
+      .birds {
+        max-width: 10rem;
+        width:     30%;
+      }
+      .wrapperTimer {
+        display: flex;
+        .timer {
+          width:          100%;
+          display:        flex;
+          flex-direction: column;
+          align-items:    flex-start;
+          p {
+            font-weight: 300;
+            font-size:   0.875rem;
+            line-height: 0.875rem;
+            color:       $mainColor;
+          }
+          ul {
+            display:         flex;
+            justify-content: space-around;
+            margin:          0;
+            padding:         0;
+            li {
+              list-style:  none;
+              color:       $mainColor;
+              font-weight: 900;
+              font-size:   2rem;
+              line-height: 1.25rem;
+              text-align:  center;
+              position:    relative;
+              &:before {
+                content:     "дн";
+                position:    absolute;
+                top:         2rem;
+                left:        30%;
+                font-weight: 300;
+                font-size:   0.75rem;
+                line-height: 1.4375rem;
+                color:       $mainColor;
+              }
+              &:after {
+                content:     ':';
+                color:       $mainColor;
+                font-weight: 900;
+                font-size:   2rem;
+                line-height: 1.25rem;
+              }
+              &:nth-child(2) {
+                &:before {
+                  content: 'год';
+                }
+              }
+              &:nth-child(3) {
+                &:before {
+                  content: 'хв';
+                }
+              }
+              &:nth-child(4) {
+                &:before {
+                  content: 'сек';
+                }
+                &:after {
+                  content: '';
+                }
+              }
+            }
+          }
+        }
+        .wrapperVideo {
+          display:         flex;
+          justify-content: flex-end;
+          .openVideo {
+            position: relative;
+            display:  flex;
+            width:    6rem;
+            z-index:  1;
+            img {
+              width: 2rem;
+            }
+            h5 {
+              font-weight: bold;
+              text-align:  right;
+              color:       $whiteColor;
+              font-size:   0.75rem;
+              line-height: 0.875rem;
+            }
+          }
+        }
       }
     }
   }
@@ -225,15 +311,13 @@ a {
       flex-direction: column;
       align-items:    center;
       .heading {
+        order:   3;
         display: flex;
         width:   100%;
         &__inner {
-          width:          56.6153%;
+          width:          80%;
           display:        flex;
           flex-direction: column;
-          img {
-            width: 43%;
-          }
           h2 {
             font-weight: bold;
             font-size:   1.875rem;
@@ -241,8 +325,12 @@ a {
             color:       $mainColor;
           }
         }
+        .birds {
+          display: none;
+        }
       }
       .reasons {
+        order:         4;
         display:       flex;
         margin-bottom: 1.5rem;
         width:         100%;
@@ -276,9 +364,11 @@ a {
         }
       }
       .btn-registration {
+        order:         2;
         margin-bottom: 3.3125rem;
       }
       .video {
+        order:         1;
         margin-bottom: 1.5625rem;
         img {
           width: 100%;
@@ -491,10 +581,8 @@ a {
 @media screen and(min-width: 375px) {
   .main {
     .sevenKeys {
-      margin-bottom: 2.5rem;
+      margin-bottom: 4rem;
       .sevenKeys__inner {
-        display:        flex;
-        flex-direction: column;
         h1 {
           margin-bottom: 4rem;
         }
@@ -514,6 +602,11 @@ a {
               right:    0;
               top:      -10rem;
             }
+          }
+        }
+        .openVideo {
+          img {
+            width: 3rem;
           }
         }
       }
@@ -539,7 +632,7 @@ a {
   }
   .main {
     .sevenKeys {
-      margin-bottom: 6rem;
+      margin-bottom: -10rem;
       .sevenKeys__inner {
         h1 {
           font-weight:   900;
@@ -548,6 +641,7 @@ a {
           color:         $mainColor;
           width:         40%;
           margin-bottom: 9.1875rem;
+          order:         1;
           &:before {
             width:  2rem;
             height: 2rem;
@@ -560,6 +654,7 @@ a {
           }
         }
         .improvements {
+          order: 2;
           .pink-up {
             top:   -27rem;
             width: 60rem;
@@ -580,19 +675,68 @@ a {
             }
           }
         }
-        a {
-          display:  flex;
-          position: absolute;
-          bottom:   -10rem;
-          right:    0;
-          width:    15rem;
-          h5 {
-            font-weight: bold;
-            font-size:   1.5rem;
-            line-height: 1.875rem;
-            text-align:  right;
-            color:       $whiteColor;
+        .wrapperTimer {
+          order:          3;
+          flex-direction: column;
+          .timer {
+            align-items: flex-end;
+            order:       2;
+            position:    relative;
+            &__inner {
+              display:        flex;
+              flex-direction: column;
+              align-items:    flex-end;
+              p {
+                font-weight:   300;
+                font-size:     1.125rem;
+                line-height:   1.5rem;
+                color:         $whiteColor;
+                width:         80%;
+                margin-bottom: 0;
+                text-align:    right;
+              }
+              ul {
+                li {
+                  font-weight: 900;
+                  font-size:   2.25rem;
+                  line-height: 3.6875rem;
+                  text-align:  center;
+                  color:       $whiteColor;
+                  &:before {
+                    top:         3rem;
+                    color:       $whiteColor;
+                    font-weight: 300;
+                    font-size:   1.125rem;
+                    line-height: 2.3125rem;
+                  }
+                  &:after {
+                    content:     ' :';
+                    font-weight: 900;
+                    font-size:   2.25rem;
+                    line-height: 3.6875rem;
+                    text-align:  center;
+                    color:       $whiteColor;
+                  }
+                }
+              }
+            }
           }
+          .wrapperVideo {
+            .openVideo {
+              width: 15rem;
+              order: 1;
+              img {
+                width: 5rem;
+              }
+              h5 {
+                font-size:   1.5rem;
+                line-height: 1.875rem;
+              }
+            }
+          }
+        }
+        .birds {
+          display: none;
         }
       }
     }
@@ -627,9 +771,9 @@ a {
     .seminar {
       margin-bottom: 4.625rem;
       .seminar__inner {
-        flex-direction:  row;
-        flex-wrap:       wrap;
-        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap:      wrap;
+        align-items:    flex-start;
         .video {
           order:         1;
           width:         50%;
@@ -644,12 +788,8 @@ a {
             width:           100%;
             flex-direction:  row;
             justify-content: space-between;
-            img {
-              width: 9.625rem;
-              order: 2;
-            }
             h2 {
-              width:       58%;
+              width:       70%;
               margin-top:  0;
               font-style:  normal;
               font-weight: 900;
@@ -657,6 +797,11 @@ a {
               line-height: 3.6875rem;
               order:       1;
             }
+          }
+          .birds {
+            display: block;
+            width:   9.625rem;
+            order:   2;
           }
         }
         .reasons {
@@ -1015,6 +1160,15 @@ a {
 
 @media screen and(min-width: 1830px) {
   .main {
+    .sevenKeys {
+      .sevenKeys__inner {
+        .improvements {
+          .pink-up {
+            width: 95%;
+          }
+        }
+      }
+    }
     .inform {
       .inform__inner {
         .data {
@@ -1055,11 +1209,11 @@ a {
   }
   60% {
     top:  120%;
-    left: 50%;
+    left: -10%;
   }
   70% {
     top:  90%;
-    left: 60%;
+    left: 0;
   }
   80% {
     top:  60%;
