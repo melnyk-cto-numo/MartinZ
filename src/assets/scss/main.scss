@@ -12,6 +12,41 @@
       height: 3.18rem;
     }
   }
+  .main {
+    .sevenKeys {
+      .sevenKeys__inner {
+        .wrapperTimer {
+          .wrapperVideo {
+            .openVideo {
+              &:hover {
+                transform: rotate(10deg);
+              }
+            }
+          }
+        }
+      }
+    }
+    .seminar {
+      .seminar__inner {
+        .video {
+          &:hover {
+            img {
+              box-shadow: 0rem -0.5rem 3rem #ec4c5c;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    .contacts {
+      .facebook {
+        &:hover {
+          color: $mainColor;
+        }
+      }
+    }
+  }
 }
 
 * {
@@ -121,7 +156,7 @@ a {
           display:         inline-block;
           &:active {
             color:   #ed4c5b;
-            opacity: .8;
+            opacity: .7;
           }
         }
       }
@@ -299,6 +334,9 @@ a {
               font-size:   0.75rem;
               line-height: 0.875rem;
             }
+            &:active {
+              opacity: 0.7;
+            }
           }
         }
       }
@@ -334,9 +372,6 @@ a {
         display:       flex;
         margin-bottom: 1.5rem;
         width:         100%;
-        img {
-          display: none;
-        }
         ul {
           width:       100%;
           padding-top: 1.125rem;
@@ -364,14 +399,20 @@ a {
         }
       }
       .btn-registration {
-        order:         2;
-        margin-bottom: 3.3125rem;
+        order:  2;
+        margin: 0 auto 3.3125rem auto;
       }
       .video {
-        order:         1;
-        margin-bottom: 1.5625rem;
+        order:            1;
+        margin-bottom:    1.5625rem;
+        background-color: transparent;
         img {
-          width: 100%;
+          width:         100%;
+          height:        100%;
+          border-radius: 1.5rem;
+        }
+        &:active {
+          opacity: 0.7;
         }
       }
     }
@@ -416,16 +457,35 @@ a {
         }
       }
       .bear {
+        position: absolute;
+        bottom:   -11rem;
+        right:    2rem;
+        width:    6rem;
+        display:  none;
+      }
+      .without {
+        display: block;
+      }
+      .heart {
         position:  absolute;
-        bottom:    -11rem;
-        right:     2rem;
-        width:     30%;
-        max-width: 10rem;
+        z-index:   0;
+        width:     1rem;
+        bottom:    -6rem;
+        right:     3.5rem;
+        animation: heart 5s linear infinite;
       }
     }
   }
   .inform {
     margin-bottom: 2.5rem;
+    .speck {
+      width:     2rem;
+      position:  absolute;
+      z-index:   0;
+      top:       0;
+      right:     0;
+      animation: speck linear 30s infinite;
+    }
     .inform__inner {
       display:   flex;
       flex-wrap: wrap;
@@ -447,12 +507,16 @@ a {
         line-height: 1.875rem;
         color:       $mainColor;
         margin:      0;
+        position:    relative;
+        z-index:     1;
       }
       p {
         font-size:   1.125rem;
         line-height: 1.5rem;
         color:       $mainColor;
         margin:      0;
+        position:    relative;
+        z-index:     1;
       }
       .data {
         width:          100%;
@@ -471,7 +535,6 @@ a {
           width:    7rem;
           z-index:  1;
           top:      6rem;
-          //transform: rotate(24.47deg);
         }
         h3 {
           color:    $whiteColor;
@@ -498,6 +561,7 @@ a {
         margin-bottom:  1.3125rem;
         flex-direction: column;
         position:       relative;
+        z-index:        1;
         h3 {
           display:        flex;
           flex-direction: column;
@@ -508,6 +572,9 @@ a {
         width:          100%;
         flex-direction: column;
         position:       relative;
+        .speck {
+          display: none;
+        }
       }
       .price {
         width:          100%;
@@ -574,7 +641,27 @@ a {
       text-decoration-line: underline;
       color:                #00A3FF;
       cursor:               pointer;
+      &:active {
+        opacity: 0.7;
+        color:   $mainColor;
+      }
     }
+  }
+}
+
+
+@keyframes heart {
+  0% {
+    bottom: -6rem;
+    right:  3.5rem;
+  }
+  50% {
+    bottom: -4rem;
+    right:  2.5rem;
+  }
+  100% {
+    bottom: -6rem;
+    right:  3.5rem;
   }
 }
 
@@ -610,6 +697,40 @@ a {
           }
         }
       }
+    }
+  }
+}
+
+@media screen and(min-width: 540px) {
+  .main {
+    .leading {
+      .leading__inner {
+        .bear {
+          width: 10rem;
+        }
+        .heart {
+          position: absolute;
+          z-index:  0;
+          width:    2rem;
+          bottom:   -3rem;
+          right:    4rem;
+        }
+      }
+    }
+  }
+
+  @keyframes heart {
+    0% {
+      bottom: -3rem;
+      right:  4rem;
+    }
+    50% {
+      bottom: 0;
+      right:  3rem;
+    }
+    100% {
+      bottom: -3rem;
+      right:  4rem;
     }
   }
 }
@@ -748,6 +869,13 @@ a {
           max-width: 30rem;
           right:     30%;
           bottom:    -15rem;
+          display:   block;
+        }
+        .without {
+          display: none;
+        }
+        .heart {
+          display: none;
         }
         h2 {
           font-weight: 900;
@@ -799,9 +927,10 @@ a {
             }
           }
           .birds {
-            display: block;
-            width:   9.625rem;
-            order:   2;
+            display:   block;
+            width:     9.625rem;
+            order:     2;
+            animation: birds 10s linear infinite;
           }
         }
         .reasons {
@@ -876,6 +1005,9 @@ a {
         .place {
           width: 50%;
           order: 3;
+          .speck {
+            display: none;
+          }
           h3 {
             display: inline-block;
           }
@@ -888,6 +1020,10 @@ a {
           align-items:     center;
           order:           4;
           width:           50%;
+          .speck {
+            width:   4rem;
+            display: block;
+          }
           h3 {
             text-align: center;
             color:      $mainColor;
@@ -974,7 +1110,7 @@ a {
   }
   .main {
     .sevenKeys {
-      margin-bottom: 15.6875rem;
+      margin-bottom: -15rem;
       .sevenKeys__inner {
         margin-left: 8.5rem;
         h1 {
@@ -1003,9 +1139,11 @@ a {
           line-height:   1.875rem;
           color:         $mainColor;
           margin-bottom: 12.75rem;
+          order:         2;
         }
         .improvements {
           padding-right: 8rem;
+          order:         3;
           .pink-up {
             top:   -45rem;
             width: 90rem;
@@ -1026,13 +1164,47 @@ a {
             }
           }
         }
-        a {
-          width:  19.75rem;
-          right:  8rem;
-          bottom: -15rem;
-          h5 {
-            font-size:   2.25rem;
-            line-height: 2.5rem;
+        .wrapperTimer {
+          .timer {
+            &__inner {
+              p {
+                font-size:     2.25rem;
+                line-height:   2.25rem;
+                text-align:    left;
+                margin-bottom: 3rem;
+                margin-left:   -1rem;
+              }
+              ul {
+                li {
+                  font-size:   4.5rem;
+                  line-height: 3.6875rem;
+                  &:before {
+                    font-size:   2.25rem;
+                    line-height: 3.6875rem;
+                    left:        20%;
+                    top:         5rem;
+                  }
+                  &:after {
+                    content:     ':';
+                    font-size:   4.5rem;
+                    line-height: 3.6875rem;
+                  }
+                }
+              }
+            }
+          }
+          .wrapperVideo {
+            padding-right: 8rem;
+            .openVideo {
+              width: 20rem;
+              h5 {
+                font-size:   2.25rem;
+                line-height: 3rem;
+              }
+              img {
+                width: 10rem;
+              }
+            }
           }
         }
       }
@@ -1061,6 +1233,10 @@ a {
       margin-bottom: 4.9375rem;
       .seminar__inner {
         .heading {
+          justify-content: space-between;
+          .birds {
+            width: 15rem;
+          }
           &__inner {
             width:       60%;
             margin-left: 4rem;
@@ -1082,10 +1258,6 @@ a {
               font-size: 1.875rem;
               width:     100%;
             }
-          }
-          img {
-            display: inline;
-            width:   15.25rem;
           }
         }
       }
@@ -1124,6 +1296,9 @@ a {
           align-items:   flex-start;
           width:         60%;
           margin-bottom: 4rem;
+          .speck {
+            display: none;
+          }
           h3 {
             text-align: left;
             color:      $whiteColor;
@@ -1139,6 +1314,10 @@ a {
           order:         4;
           width:         100%;
           margin-bottom: 6rem;
+          .speck {
+            width: 6rem;
+            display: block;
+          }
         }
         .btn-registration__wrapper {
           display: block;
@@ -1158,9 +1337,38 @@ a {
   }
 }
 
+@media screen and(min-width: 1540px){
+  .main{
+    .inform {
+      .inform__inner {
+        .data {
+          .pink-down {
+            width: 83%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 1740px){
+  .main{
+    .inform {
+      .inform__inner {
+        .data {
+          .pink-down {
+            width: 78%;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and(min-width: 1830px) {
   .main {
     .sevenKeys {
+      margin-bottom: -12rem;
       .sevenKeys__inner {
         .improvements {
           .pink-up {
@@ -1175,6 +1383,53 @@ a {
           .pink-down {
             top:   -47rem;
             width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 2040px) {
+  .main {
+    .sevenKeys {
+      margin-bottom: -4rem;
+      .sevenKeys__inner {
+        .improvements {
+          .pink-up {
+            width: 90%;
+          }
+        }
+      }
+    }
+    .inform {
+      .inform__inner {
+        .data {
+          .pink-down {
+            width: 75%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and(min-width: 2300px) {
+  .main {
+    .sevenKeys {
+      margin-bottom: 0;
+      .sevenKeys__inner {
+        .improvements {
+          .pink-up {
+            width: 85%;
+          }
+        }
+      }
+    }
+    .inform {
+      .inform__inner {
+        .data {
+          .pink-down {
+            width: 70%;
           }
         }
       }
@@ -1226,5 +1481,78 @@ a {
   100% {
     top:  0;
     left: 0;
+  }
+}
+
+@keyframes speck {
+  0% {
+    top:       0;
+    right:     0;
+    transform: rotate(0);
+  }
+  10% {
+    top:       40%;
+    right:     15%;
+    transform: rotate(72deg);
+  }
+  20% {
+    top:       0;
+    right:     30%;
+    transform: rotate(144deg);
+  }
+  30% {
+    top:       80%;
+    right:     30%;
+    transform: rotate(216deg);
+  }
+  40% {
+    top:       260%;
+    right:     15%;
+    transform: rotate(288deg);
+  }
+  50% {
+    top:       450%;
+    right:     30%;
+    transform: rotate(360deg);
+  }
+  60% {
+    top:       120%;
+    right:     20%;
+    transform: rotate(432deg);
+  }
+  70% {
+    top:       90%;
+    right:     30%;
+    transform: rotate(504deg);
+  }
+  80% {
+    top:       60%;
+    right:     15%;
+    transform: rotate(576deg);
+  }
+  90% {
+    top:       30%;
+    right:     10%;
+    transform: rotate(648deg);
+  }
+  100% {
+    top:       0;
+    right:     0;
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes birds {
+  0% {
+    transform:        rotate(0);
+    transform-origin: 100% 0;
+  }
+  50% {
+    transform:        rotate(-15deg);
+    transform-origin: 100% 0;
+  }
+  100% {
+    transform:        rotate(0);
+    transform-origin: 100% 0;
   }
 }
