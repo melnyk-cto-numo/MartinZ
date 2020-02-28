@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta name="theme-color" content="#630de8"/>
+    <meta name="theme-color" content="#ec4c5c">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>7 ключів від щастя</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
@@ -15,9 +15,9 @@
     <header class="header">
         <nav class="menu">
             <ul>
-                <li><a href="#">Про семінар</a></li>
-                <li><a href="#">Реєстрація</a></li>
-                <li><a href="#">Контакти</a></li>
+                <li><a href="#aboutSeminar">Про семінар</a></li>
+                <li><a href="#registration">Реєстрація</a></li>
+                <li><a href="#contactsFooter">Контакти</a></li>
             </ul>
         </nav>
     </header>
@@ -35,33 +35,49 @@
                             <p>Реєструйся на безкоштовний курс з професійним психологом!</p>
                         </div>
                     </div>
-                    <a href="/" class="openVideo">
-                        <h5>Дивитися відео на</h5>
-                        <img src="./assets/images/youtube-logo.svg" alt="logo-youtube">
-                    </a>
+                    <img src="./assets/images/birds-1.svg" alt="birds" class="birds">
+                    <div class="wrapperTimer">
+                        <div class="timer">
+                            <div class="timer__inner">
+                                <p>До початку курсу залишилося:</p>
+                                <ul>
+                                    <li>01</li>
+                                    <li>23</li>
+                                    <li>17</li>
+                                    <li>06</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="wrapperVideo">
+                            <a href="https://www.youtube.com/channel/UC-46F_uPRGs4h5WWhRSvpKQ" target="_blank"
+                               class="openVideo">
+                                <h5>Дивитися відео на</h5>
+                                <img src="./assets/images/youtube-logo.svg" alt="logo-youtube">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="seminar">
+        <section class="seminar" id="aboutSeminar">
             <div class="container">
                 <div class="seminar__inner">
                     <div class="heading">
                         <div class="heading__inner">
-                            <img src="./assets/images/birds-1.svg" alt="birds">
-                            <h2>Для чого потрібен цей семінар?</h2>
+                            <h2>Для чого потрібен цей курс?</h2>
                         </div>
+                        <img src="./assets/images/birds-1.svg" alt="birds" class="birds">
                     </div>
                     <div class="reasons">
-                        <div class="reasons__inner">
-                            <p>– Зрозуміти, як побудувати щасливі стосунки з коханою людиною;</p>
-                            <p class="before__img">– Знайти причини, чому попередні відносини на склались;</p>
-                            <p>– Запобігти розладу в стосунках;</p>
-                            <p>– Зформувати міцьний фундамент для майбунього сімейного життя.</p>
-                        </div>
-                        <img src="./assets/images/birds-1.svg" alt="birds">
+                        <ul>
+                            <li>Зрозуміти, як будувати щасливі стосунки з коханою людиною;</li>
+                            <li class="before__img">Знайти причини, чому попередні відносини на склались;</li>
+                            <li>Запобігти розладу в стосунках;</li>
+                            <li>Зформувати міцьний фундамент для майбунього сімейного життя.</li>
+                        </ul>
                     </div>
-                    <a href="/" class="btn-registration">зареєструватися</a>
-                    <a href="/" class="video">
+                    <a href="/" class="btn-registration" id="registration">зареєструватися</a>
+                    <a href="https://www.youtube.com/watch?v=WZx0xEMexnQ" class="video" target="_blank">
                         <img src="./assets/images/mask_group.svg" alt="video">
                     </a>
                 </div>
@@ -71,12 +87,14 @@
             <div class="container">
                 <div class="leading__inner">
                     <h2>
-                        Ведуча семінару:
+                        Ведуча курсу:
                     </h2>
                     <div class="author">
                         <img src="./assets/images/androsova.png" alt="androsova">
                         <p><span>Вікторія Андросова</span> психолог з досвідом консультацій 8 років.</p>
                     </div>
+                    <img src="./assets/images/bearWithoutHeart.svg" alt="bear" class="bear without">
+                    <img src="./assets/images/heart.svg" alt="heart" class="without heart">
                     <img src="./assets/images/bear-1.svg" alt="bear" class="bear">
                 </div>
             </div>
@@ -86,22 +104,27 @@
                 <div class="inform__inner">
                     <div class="data">
                         <img src="./assets/images/cupidon-1.svg" alt="cupidon" class="cupidon">
-                        <img src="./assets/images/Vector.svg" alt="pink" class="background pink-down">
-                        <h3>Дата <span>семінару:</span></h3>
+                        <img src="assets/images/bigSpeck.svg" alt="pink" class="background pink-down">
+                        <h3>Дата <span>курсу:</span></h3>
                         <p>16 лютого - 27 березня</p>
                         <span class="p__inner">(7 зустрічей, 1 раз на тиждень)</span>
                     </div>
                     <div class="place">
-                        <h3>Де буде <span>проходити семінар:</span></h3>
+                        <h3>Де буде <span>проходити курс:</span></h3>
                         <p>м. Київ, вул. Голосіївська, 38 2-й поверх</p>
+                        <img src="./assets/images/speck.svg" alt="speck" class="speck">
                     </div>
                     <div class="organization">
                         <h3>Хто організовує?</h3>
                         <p>Організатор ГО "Цінуй майбутнє"</p>
+                        <img src="./assets/images/speck.svg" alt="speck" class="speck">
                     </div>
                     <div class="price">
                         <h3>Яка вартість курсу?</h3>
                         <p>*курс проводиться безкоштовно.</p>
+                    </div>
+                    <div class="btn-registration__wrapper">
+                        <a href="/" class="btn-registration">зареєструватися</a>
                     </div>
                 </div>
             </div>
@@ -113,9 +136,10 @@
                 <a href="/" class="btn-registration">зареєструватися</a>
             </div>
             <div class="contacts">
-                <h3>Як з нами зв'язатися?</h3>
+                <h3 id="contactsFooter">Як з нами зв'язатися?</h3>
                 <p>тел.: 0448931480</p>
-                <a href="/" class="facebook">Facebook-сторінка</a>
+                <a href="https://www.facebook.com/Schastia.poruch/" class="facebook"
+                   target="_blank">Facebook-сторінка</a>
             </div>
         </div>
     </footer>
