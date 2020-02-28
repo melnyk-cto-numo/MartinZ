@@ -9,7 +9,7 @@
     border:           0.15rem solid $whiteColor;
     background-color: $whiteColor;
     &:after {
-      height: 3.18rem;
+      height: 95%;
     }
   }
   .main {
@@ -30,8 +30,9 @@
       &__inner {
         .video {
           &:hover {
-            img {
-              box-shadow: 0rem -0.5rem 3rem #ec4c5c;
+            .play {
+              display: block;
+              opacity: 0.7;
             }
           }
         }
@@ -96,7 +97,7 @@ a {
   transition:      all linear 0.2s;
   &:after {
     content:          '';
-    width:            13rem;
+    width:            95%;
     height:           0;
     border-radius:    6.25rem;
     position:         absolute;
@@ -272,13 +273,13 @@ a {
             justify-content: space-around;
             margin:          0;
             padding:         0;
-            list-style:  none;
-            color:       $mainColor;
-            font-weight: 900;
-            font-size:   2rem;
-            line-height: 1.25rem;
-            text-align:  center;
-            position:    relative;
+            list-style:      none;
+            color:           $mainColor;
+            font-weight:     900;
+            font-size:       2rem;
+            line-height:     1.25rem;
+            text-align:      center;
+            position:        relative;
             li {
               list-style: none;
               position:   relative;
@@ -340,7 +341,7 @@ a {
     }
   }
   .seminar {
-    margin-bottom:  2rem;
+    margin-bottom: 2rem;
     &__inner {
       display:        flex;
       flex-direction: column;
@@ -403,10 +404,19 @@ a {
         order:            1;
         margin-bottom:    1.5625rem;
         background-color: transparent;
+        position:         relative;
         img {
           width:         100%;
           height:        100%;
           border-radius: 1.5rem;
+        }
+        .play {
+          position: absolute;
+          top:      38%;
+          left:     38%;
+          width:    24%;
+          height:   24%;
+          display:  none;
         }
         &:active {
           opacity: 0.7;
@@ -1396,6 +1406,7 @@ a {
     }
   }
 }
+
 @media screen and(min-width: 2300px) {
   .main {
     .sevenKeys {
