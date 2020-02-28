@@ -37,4 +37,26 @@ document.addEventListener('DOMContentLoaded', function () {
         days.innerHTML = String(today);
 
     }, 1000);
+
+    // show video
+    const cover = $("#cover");
+    const video = $("#video");
+
+    cover.on('click', function () {
+        $('<iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/riQGv-9abKg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+            .appendTo('#video');
+        video.css("display", "flex");
+        $("html").css("overflow", "hidden");
+    });
+
+    $(document).mouseup(function (e) {
+        const player = $("#player");
+        const cover = $("#cover ");
+        if (!player.is(e.target) && cover.has(e.target).length === 0) {
+            $("html").css("overflow", "inherit");
+            video.hide();
+            player.remove()
+        }
+    });
+
 });
