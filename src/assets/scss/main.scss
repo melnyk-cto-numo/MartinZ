@@ -9,7 +9,7 @@
     border:           0.15rem solid $whiteColor;
     background-color: $whiteColor;
     &:after {
-      height: 3.18rem;
+      height: 95%;
     }
   }
   .main {
@@ -31,7 +31,6 @@
         .video {
           &:hover {
             img {
-              box-shadow: 0rem -0.5rem 3rem #ec4c5c;
             }
           }
         }
@@ -96,7 +95,7 @@ a {
   transition:      all linear 0.2s;
   &:after {
     content:          '';
-    width:            13rem;
+    width:            95%;
     height:           0;
     border-radius:    6.25rem;
     position:         absolute;
