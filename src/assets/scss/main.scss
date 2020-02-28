@@ -27,7 +27,7 @@
       }
     }
     .seminar {
-      .seminar__inner {
+      &__inner {
         .video {
           &:hover {
             img {
@@ -264,20 +264,24 @@ a {
             font-size:   0.875rem;
             line-height: 0.875rem;
             color:       $mainColor;
+            max-width:   150px;
+            margin-left: 1rem;
           }
           ul {
             display:         flex;
             justify-content: space-around;
             margin:          0;
             padding:         0;
+            list-style:  none;
+            color:       $mainColor;
+            font-weight: 900;
+            font-size:   2rem;
+            line-height: 1.25rem;
+            text-align:  center;
+            position:    relative;
             li {
-              list-style:  none;
-              color:       $mainColor;
-              font-weight: 900;
-              font-size:   2rem;
-              line-height: 1.25rem;
-              text-align:  center;
-              position:    relative;
+              list-style: none;
+              position:   relative;
               &:before {
                 content:     "дн";
                 position:    absolute;
@@ -287,13 +291,6 @@ a {
                 font-size:   0.75rem;
                 line-height: 1.4375rem;
                 color:       $mainColor;
-              }
-              &:after {
-                content:     ':';
-                color:       $mainColor;
-                font-weight: 900;
-                font-size:   2rem;
-                line-height: 1.25rem;
               }
               &:nth-child(2) {
                 &:before {
@@ -343,8 +340,8 @@ a {
     }
   }
   .seminar {
-    margin-bottom: 2rem;
-    .seminar__inner {
+    margin-bottom:  2rem;
+    &__inner {
       display:        flex;
       flex-direction: column;
       align-items:    center;
@@ -806,38 +803,28 @@ a {
             &__inner {
               display:        flex;
               flex-direction: column;
-              align-items:    flex-end;
+              align-items:    flex-start;
               p {
                 font-weight:   300;
                 font-size:     1.125rem;
                 line-height:   1.5rem;
                 color:         $whiteColor;
-                width:         80%;
+                max-width:     200px;
                 margin-bottom: 0;
-                text-align:    right;
+                text-align:    left;
               }
               ul {
-                li {
-                  font-weight: 900;
-                  font-size:   2.25rem;
-                  line-height: 3.6875rem;
-                  text-align:  center;
+                font-weight: 900;
+                font-size:   2.25rem;
+                line-height: 3.6875rem;
+                text-align:  center;
+                color:       $whiteColor;
+                li:before {
+                  top:         3rem;
                   color:       $whiteColor;
-                  &:before {
-                    top:         3rem;
-                    color:       $whiteColor;
-                    font-weight: 300;
-                    font-size:   1.125rem;
-                    line-height: 2.3125rem;
-                  }
-                  &:after {
-                    content:     ' :';
-                    font-weight: 900;
-                    font-size:   2.25rem;
-                    line-height: 3.6875rem;
-                    text-align:  center;
-                    color:       $whiteColor;
-                  }
+                  font-weight: 300;
+                  font-size:   1.125rem;
+                  line-height: 2.3125rem;
                 }
               }
             }
@@ -898,7 +885,7 @@ a {
     }
     .seminar {
       margin-bottom: 4.625rem;
-      .seminar__inner {
+      &__inner {
         flex-direction: column;
         flex-wrap:      wrap;
         align-items:    flex-start;
@@ -1172,7 +1159,8 @@ a {
                 line-height:   2.25rem;
                 text-align:    left;
                 margin-bottom: 3rem;
-                margin-left:   -1rem;
+                margin-left:   1rem;
+                max-width:     350px;
               }
               ul {
                 li {
@@ -1183,11 +1171,6 @@ a {
                     line-height: 3.6875rem;
                     left:        20%;
                     top:         5rem;
-                  }
-                  &:after {
-                    content:     ':';
-                    font-size:   4.5rem;
-                    line-height: 3.6875rem;
                   }
                 }
               }
@@ -1231,7 +1214,7 @@ a {
     }
     .seminar {
       margin-bottom: 4.9375rem;
-      .seminar__inner {
+      &__inner {
         .heading {
           justify-content: space-between;
           .birds {
@@ -1315,7 +1298,7 @@ a {
           width:         100%;
           margin-bottom: 6rem;
           .speck {
-            width: 6rem;
+            width:   6rem;
             display: block;
           }
         }
@@ -1337,8 +1320,8 @@ a {
   }
 }
 
-@media screen and(min-width: 1540px){
-  .main{
+@media screen and(min-width: 1540px) {
+  .main {
     .inform {
       .inform__inner {
         .data {
@@ -1351,8 +1334,8 @@ a {
   }
 }
 
-@media screen and(min-width: 1740px){
-  .main{
+@media screen and(min-width: 1740px) {
+  .main {
     .inform {
       .inform__inner {
         .data {
