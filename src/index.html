@@ -41,9 +41,12 @@
                             <div class="timer__inner">
                                 <p>До початку курсу залишилося:</p>
                                 <ul>
-                                    <li id="days">00</li>:
-                                    <li id="hours">00</li>:
-                                    <li id="minutes">00</li>:
+                                    <li id="days">00</li>
+                                    :
+                                    <li id="hours">00</li>
+                                    :
+                                    <li id="minutes">00</li>
+                                    :
                                     <li id="seconds">00</li>
                                 </ul>
                             </div>
@@ -59,10 +62,10 @@
                 </div>
             </div>
         </section>
-        <section class="seminar" id="aboutSeminar">
+        <section class="seminar">
             <div class="container">
                 <div class="seminar__inner">
-                    <div class="heading">
+                    <div class="heading" id="aboutSeminar">
                         <div class="heading__inner">
                             <h2>Для чого потрібен цей курс?</h2>
                         </div>
@@ -76,11 +79,11 @@
                             <li>Зформувати міцьний фундамент для майбунього сімейного життя.</li>
                         </ul>
                     </div>
-                    <a href="/" class="btn-registration" id="registration">зареєструватися</a>
-                    <a href="https://www.youtube.com/watch?v=WZx0xEMexnQ" class="video" target="_blank">
+                    <a href="/" class="btn-registration">зареєструватися</a>
+                    <div id="cover" class="video">
                         <img src="./assets/images/Mask-Group.svg" alt="video">
                         <img src="./assets/images/play.svg" alt="play" class="play">
-                    </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -100,7 +103,7 @@
                 </div>
             </div>
         </section>
-        <section class="inform">
+        <section id="registration" class="inform">
             <div class="container">
                 <div class="inform__inner">
                     <div class="data">
@@ -146,6 +149,10 @@
     </footer>
 </div>
 
+<!-- Video-->
+<section id="video"></section>
+
+<script src="./assets/js/jquery.js"></script>
 <script src="./assets/js/main.js"></script>
 </body>
 </html>
