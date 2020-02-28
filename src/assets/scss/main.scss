@@ -30,7 +30,9 @@
       &__inner {
         .video {
           &:hover {
-            img {
+            .play {
+              display: block;
+              opacity: 0.7;
             }
           }
         }
@@ -271,13 +273,13 @@ a {
             justify-content: space-around;
             margin:          0;
             padding:         0;
-            list-style:  none;
-            color:       $mainColor;
-            font-weight: 900;
-            font-size:   2rem;
-            line-height: 1.25rem;
-            text-align:  center;
-            position:    relative;
+            list-style:      none;
+            color:           $mainColor;
+            font-weight:     900;
+            font-size:       2rem;
+            line-height:     1.25rem;
+            text-align:      center;
+            position:        relative;
             li {
               list-style: none;
               position:   relative;
@@ -339,7 +341,7 @@ a {
     }
   }
   .seminar {
-    margin-bottom:  2rem;
+    margin-bottom: 2rem;
     &__inner {
       display:        flex;
       flex-direction: column;
@@ -402,10 +404,19 @@ a {
         order:            1;
         margin-bottom:    1.5625rem;
         background-color: transparent;
+        position:         relative;
         img {
           width:         100%;
           height:        100%;
           border-radius: 1.5rem;
+        }
+        .play {
+          position: absolute;
+          top:      38%;
+          left:     38%;
+          width:    24%;
+          height:   24%;
+          display:  none;
         }
         &:active {
           opacity: 0.7;
@@ -1395,6 +1406,7 @@ a {
     }
   }
 }
+
 @media screen and(min-width: 2300px) {
   .main {
     .sevenKeys {
