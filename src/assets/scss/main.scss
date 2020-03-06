@@ -264,7 +264,7 @@ iframe {
             width:    80%;
             position: absolute;
             right:    -0.5rem;
-            top:      -8rem;
+            top:      -9rem;
           }
           h3 {
             text-align:  right;
@@ -742,7 +742,7 @@ iframe {
               width:    100%;
               position: absolute;
               right:    0;
-              top:      -10rem;
+              top:      -11.5rem;
             }
           }
         }
@@ -1198,7 +1198,7 @@ iframe {
             width: 42.5rem;
             .sevenKeys__img {
               width: 100%;
-              top:   -38rem;
+              top:   -42rem;
             }
             h3 {
               font-size:   3rem;
@@ -1516,6 +1516,16 @@ iframe {
       margin-bottom: 0;
       font-size:     24px;
       line-height:   24px;
+    }
+  }
+  .seminar {
+    &__inner {
+      .video {
+        .play {
+          display: block;
+          opacity: 0.7;
+        }
+      }
     }
   }
 
