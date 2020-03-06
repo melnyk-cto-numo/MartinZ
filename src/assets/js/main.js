@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let seconds = document.getElementById('seconds');
 
     setInterval(() => {
-        const timeEnd = new Date(2020, 1, 29, 0, 0, 0);
+        const timeEnd = new Date(2020, 2, 26, 0, 0, 0);
         let today = new Date(Date.now());
         today = Math.floor((timeEnd - today) / 1000);
 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const video = $("#video");
 
     cover.on('click', function () {
-        $('<iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/riQGv-9abKg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+        $('<iframe id="player" width="560" height="315" src="https://www.youtube.com/watch?v=4LAJ8LHLRQs" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
             .appendTo('#video');
         video.css("display", "flex");
         $("html").css("overflow", "hidden");

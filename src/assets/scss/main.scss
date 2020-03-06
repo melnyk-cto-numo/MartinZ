@@ -156,8 +156,9 @@ iframe {
 }
 
 .header {
-  position: relative;
-  z-index:  5;
+  position:      relative;
+  z-index:       5;
+  margin-bottom: 20px;
   .menu {
     padding:     0 1.375rem;
     max-width:   600px;
@@ -193,7 +194,7 @@ iframe {
   display:        flex;
   flex-direction: column;
   .sevenKeys {
-    margin-bottom: 6rem;
+    margin-bottom: 14%;
     .sevenKeys__inner {
       display:        flex;
       flex-direction: column;
@@ -201,12 +202,12 @@ iframe {
         display:       inline-block;
         font-style:    normal;
         font-weight:   900;
-        font-size:     1.875rem;
-        line-height:   28px;
+        font-size:     5.6vw;
+        line-height:   5.6vw;
         color:         $mainColor;
         margin-top:    0;
-        width:         10rem;
         margin-bottom: 2rem;
+        width:         fit-content;
         position:      relative;
         z-index:       1;
         &:before {
@@ -220,6 +221,17 @@ iframe {
           top:              0;
           left:             0;
           animation:        position linear infinite 30s;
+        }
+        &:after {
+          content:         '';
+          background:      url("../images/logo.svg") left bottom no-repeat;
+          background-size: contain;
+          position:        absolute;
+          right:           -0.2rem;
+          top:             50%;
+          height:          100%;
+          width:           42%;
+          transform:       translate(100%, -50%);
         }
         span {
           font-style:  normal;
@@ -243,7 +255,7 @@ iframe {
           top:     -9rem;
           right:   -7%;
           z-index: 0;
-          width:   120%;
+          width:   115%;
         }
         &__inner {
           position: relative;
@@ -364,7 +376,7 @@ iframe {
     }
   }
   .seminar {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     &__inner {
       display:        flex;
       flex-direction: column;
@@ -374,7 +386,7 @@ iframe {
         display: flex;
         width:   100%;
         &__inner {
-          width:          80%;
+          width:          90%;
           display:        flex;
           flex-direction: column;
           h2 {
@@ -394,13 +406,14 @@ iframe {
         margin-bottom: 1.5rem;
         width:         100%;
         ul {
-          width:       100%;
-          padding-top: 1.125rem;
+          width:        100%;
+          padding-top:  1.125rem;
+          padding-left: 1.5rem;
           li {
             position:      relative;
             list-style:    none;
             margin-top:    0;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1rem;
             font-size:     1.125rem;
             line-height:   1.25rem;
             color:         $mainColor;
@@ -413,7 +426,7 @@ iframe {
               top:              50%;
               left:             -1.5rem;
             }
-            &:last-child {
+            &:nth-last-child(1) {
               margin-bottom: 0;
             }
           }
@@ -421,7 +434,7 @@ iframe {
       }
       .btn-registration {
         order:  2;
-        margin: 0 auto 3.3125rem auto;
+        margin: 0 auto 1.6875rem auto;
       }
       .video {
         order:            1;
@@ -459,6 +472,7 @@ iframe {
       align-items:    center;
       width:          100%;
       h2 {
+        margin:      0;
         font-weight: bold;
         font-size:   1.875rem;
         line-height: 3.6875rem;
@@ -593,6 +607,7 @@ iframe {
         flex-direction: column;
         position:       relative;
         z-index:        1;
+        margin-left:    10%;
         h3 {
           display:        flex;
           flex-direction: column;
@@ -659,12 +674,21 @@ iframe {
       margin-bottom: 1rem;
       width:         60%;
     }
-    p {
+    .tel {
       font-size:     1.5rem;
       line-height:   2.375rem;
       color:         $mainColor;
       margin-bottom: 0;
       margin-top:    0;
+      display:       block;
+      cursor:        pointer;
+      &:hover {
+        color: #ed4c5b;
+      }
+      &:active {
+        opacity: .8;
+        color: #ed4c5b;
+      }
     }
     .facebook {
       font-size:            1.125rem;
@@ -696,7 +720,7 @@ iframe {
   }
 }
 
-@media screen and(min-width: 375px) {
+@media screen and(min-width: 374px) {
   .main {
     .sevenKeys {
       margin-bottom: 4rem;
@@ -773,6 +797,7 @@ iframe {
     }
   }
   .header {
+    margin-bottom: 100px;
     .menu {
       margin-left: 10%;
       ul {
@@ -788,20 +813,21 @@ iframe {
       .sevenKeys__inner {
         h1 {
           font-weight:   900;
-          font-size:     4rem;
-          line-height:   4.6875rem;
           color:         $mainColor;
-          width:         40%;
           margin-bottom: 9.1875rem;
           order:         1;
           &:before {
             width:  2rem;
             height: 2rem;
           }
+          &:after {
+            right: -0.5rem;
+
+          }
           span {
             font-weight: 900;
-            font-size:   6rem;
-            line-height: 7rem;
+            font-size:   4rem;
+            line-height: 3.125rem;
             color:       $mainColor;
           }
         }
@@ -929,7 +955,8 @@ iframe {
           margin-bottom: 4.5rem;
         }
         .btn-registration {
-          order: 2;
+          order:  2;
+          margin: 0 auto 3.3125rem auto;
         }
         .heading {
           order: 3;
@@ -958,10 +985,11 @@ iframe {
           order: 4;
           ul {
             li {
-              font-style:  normal;
-              font-weight: normal;
-              font-size:   1.5rem;
-              line-height: 2.25rem;
+              font-style:    normal;
+              font-weight:   normal;
+              font-size:     1.5rem;
+              line-height:   2.25rem;
+              margin-bottom: 2.5rem
             }
           }
         }
@@ -1024,8 +1052,9 @@ iframe {
           margin-bottom: 2rem;
         }
         .place {
-          width: 50%;
-          order: 3;
+          width:       50%;
+          order:       3;
+          margin-left: 0;
           .speck {
             display: none;
           }
@@ -1133,13 +1162,9 @@ iframe {
     .sevenKeys {
       margin-bottom: -15rem;
       .sevenKeys__inner {
-        margin-left: 8.5rem;
         h1 {
           font-weight:   900;
-          font-size:     6rem;
-          line-height:   7rem;
           color:         $mainColor;
-          width:         40%;
           margin-bottom: 0;
           &:before {
             width:  3rem;
@@ -1148,8 +1173,8 @@ iframe {
           span {
             font-weight: 900;
             color:       $mainColor;
-            font-size:   9rem;
-            line-height: 10.5625rem;
+            font-size:   6rem;
+            line-height: 7rem;
             text-align:  center;
           }
         }
@@ -1231,6 +1256,9 @@ iframe {
       .leading__inner {
         margin-left: 36.3%;
         align-items: flex-start;
+        h2 {
+          margin-bottom: 60px;
+        }
         .author {
           min-width: 51%;
           img {
@@ -1383,16 +1411,14 @@ iframe {
 }
 
 @media screen and(min-width: 1830px) {
+  .header {
+    .menu {
+      max-width: 900px;
+    }
+  }
   .main {
     .sevenKeys {
       margin-bottom: -12rem;
-      .sevenKeys__inner {
-        .improvements {
-          .pink-up {
-            width: 95%;
-          }
-        }
-      }
     }
     .inform {
       .inform__inner {
@@ -1404,6 +1430,9 @@ iframe {
         }
       }
     }
+    .leading .leading__inner h2 {
+      margin-top: 100px;
+    }
   }
 }
 
@@ -1414,7 +1443,7 @@ iframe {
       .sevenKeys__inner {
         .improvements {
           .pink-up {
-            width: 90%;
+            width: 85%;
           }
         }
       }
@@ -1453,6 +1482,40 @@ iframe {
       }
     }
   }
+}
+
+@media screen and (max-width: 567px) {
+  .main {
+    .seminar__inner {
+      .heading__inner {
+        h2 {
+          margin: 0;
+        }
+      }
+    }
+    .inform {
+      .inform__inner {
+        .price {
+          margin-bottom: 0;
+        }
+        .data p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .footer .contacts {
+    .tel {
+      font-size:   18px;
+      line-height: 38px;
+    }
+    h3 {
+      margin-bottom: 0;
+      font-size:     24px;
+      line-height:   24px;
+    }
+  }
+
 }
 
 @keyframes position {
