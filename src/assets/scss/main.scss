@@ -687,7 +687,7 @@ iframe {
       }
       &:active {
         opacity: .8;
-        color: #ed4c5b;
+        color:   #ed4c5b;
       }
     }
     .facebook {
@@ -1485,6 +1485,9 @@ iframe {
 }
 
 @media screen and (max-width: 567px) {
+  .header .menu ul li a {
+    padding: 1.5rem .5rem 2.5rem .5rem;
+  }
   .main {
     .seminar__inner {
       .heading__inner {

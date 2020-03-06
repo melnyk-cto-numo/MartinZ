@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const video = $("#video");
 
     cover.on('click', function () {
-        $('<iframe id="player" width="560" height="315" src="https://www.youtube.com/watch?v=4LAJ8LHLRQs" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+        $('<iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/4LAJ8LHLRQs" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
             .appendTo('#video');
         video.css("display", "flex");
         $("html").css("overflow", "hidden");
