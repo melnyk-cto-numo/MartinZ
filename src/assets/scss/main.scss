@@ -206,7 +206,7 @@ iframe {
         line-height:   5.6vw;
         color:         $mainColor;
         margin-top:    0;
-        margin-bottom: 2rem;
+        margin-bottom: 0;
         width:         fit-content;
         position:      relative;
         z-index:       1;
@@ -242,8 +242,13 @@ iframe {
         }
       }
       .desktop {
-        display:  none;
-        position: relative;
+        display:     inline;
+        font-weight: 300;
+        font-size:   10px;
+        line-height: 30px;
+        color:       $mainColor;
+        margin:      0;
+        order:       0;
       }
       .improvements {
         width:          100%;
@@ -725,8 +730,8 @@ iframe {
     .sevenKeys {
       margin-bottom: 4rem;
       .sevenKeys__inner {
-        h1 {
-          margin-bottom: 4rem;
+        .desktop {
+          margin-bottom: 2rem;
         }
         .improvements {
           .pink-up {
@@ -811,10 +816,16 @@ iframe {
     .sevenKeys {
       margin-bottom: -10rem;
       .sevenKeys__inner {
+        .desktop {
+          margin-bottom: 6rem;
+          order:         2;
+          font-size:     20px;
+          margin-top:    21px;
+        }
         h1 {
           font-weight:   900;
           color:         $mainColor;
-          margin-bottom: 9.1875rem;
+          margin-bottom: 0;
           order:         1;
           &:before {
             width:  2rem;
@@ -1162,6 +1173,11 @@ iframe {
     .sevenKeys {
       margin-bottom: -15rem;
       .sevenKeys__inner {
+        .desktop {
+          margin-bottom: 12.75rem;
+          font-size:     30px;
+          margin-top:    27px;
+        }
         h1 {
           font-weight:   900;
           color:         $mainColor;
@@ -1177,15 +1193,6 @@ iframe {
             line-height: 7rem;
             text-align:  center;
           }
-        }
-        .desktop {
-          display:       inline;
-          font-weight:   300;
-          font-size:     1.875rem;
-          line-height:   1.875rem;
-          color:         $mainColor;
-          margin-bottom: 12.75rem;
-          order:         2;
         }
         .improvements {
           padding-right: 8rem;
