@@ -236,9 +236,10 @@ iframe {
         span {
           font-style:  normal;
           font-weight: 900;
-          font-size:   40px;
-          line-height: 28px;
           color:       $mainColor;
+          font-size:   6.67vw;
+          line-height: 7.8vw;
+
         }
       }
       .desktop {
@@ -249,6 +250,8 @@ iframe {
         color:       $mainColor;
         margin:      0;
         order:       0;
+        position:    relative;
+        z-index:     1;
       }
       .improvements {
         width:          100%;
@@ -835,12 +838,6 @@ iframe {
             right: -0.5rem;
 
           }
-          span {
-            font-weight: 900;
-            font-size:   4rem;
-            line-height: 3.125rem;
-            color:       $mainColor;
-          }
         }
         .improvements {
           order: 2;
@@ -1189,8 +1186,6 @@ iframe {
           span {
             font-weight: 900;
             color:       $mainColor;
-            font-size:   6rem;
-            line-height: 7rem;
             text-align:  center;
           }
         }
