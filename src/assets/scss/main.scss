@@ -2,7 +2,9 @@
 @import "variables";
 
 @media (any-hover: hover) {
-
+  .button:hover {
+    background-color: #825c10;
+  }
 }
 
 * {
@@ -11,7 +13,7 @@
   margin:      0;
   padding:     0;
   font-family: 'Apercu', sans-serif;
-
+  transition:  all linear 0.3s;
 }
 
 html,
@@ -53,7 +55,7 @@ h1, h2 {
 }
 
 .container {
-  width:     100%;
+  width:     70%;
   max-width: 1400px;
   margin:    0 auto;
   position:  relative;
@@ -99,8 +101,10 @@ h1, h2 {
   }
   .top-back {
     position: absolute;
+    //object-fit: cover;
+    height:   100%;
     z-index:  0;
-    top:      -120px;
+    top:      0;
     left:     0;
   }
   .modern-house {
@@ -189,16 +193,20 @@ h1, h2 {
     }
   }
   .call {
-    display:       flex;
-    width:         100%;
-    padding-top:   11vw;
-    position:      relative;
-    margin-bottom: 22px;
+    display:        flex;
+    width:          100%;
+    padding-top:    11vw;
+    padding-bottom: 16vw;
+    position:       relative;
+    margin-bottom:  22px;
     .back-call {
-      position: absolute;
-      z-index:  -1;
-      left:     0;
-      top:      0;
+      position:        absolute;
+      object-fit:      cover;
+      object-position: top;
+      height:          100%;
+      z-index:         -1;
+      left:            0;
+      top:             0;
     }
     h2 {
       color:       #e4a11b;
@@ -217,14 +225,14 @@ h1, h2 {
     }
     &__image {
       display:         flex;
-      justify-content: center;
+      justify-content: space-between;
       width:           100%;
       align-items:     center;
       margin-bottom:   70px;
     }
     &__way {
       display:         flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items:     stretch;
       width:           100%;
       h3 {
@@ -249,15 +257,17 @@ h1, h2 {
       flex-direction:  column;
       align-items:     center;
       justify-content: flex-start;
-      width:           33.333%;
+      width:           32%;
       img {
         width: 30%;
       }
     }
   }
   .person {
-    position:      relative;
-    margin-bottom: 290px;
+    position:       relative;
+    margin-top:     -37vw;
+    padding-top:    16vw;
+    padding-bottom: 21vw;
     .container {
       display:         flex;
       flex-direction:  column;
@@ -265,21 +275,25 @@ h1, h2 {
       justify-content: flex-start;
     }
     .person-back {
-      position: absolute;
-      left:     0;
-      top:      -240px;
-      z-index:  0;
+      position:        absolute;
+      object-fit:      cover;
+      object-position: top;
+      height:          100%;
+      left:            0;
+      top:             0;
+      z-index:         0;
     }
     .photo {
       max-width:     460px;
       margin-bottom: 79px;
     }
-    h3 {
+    h2 {
       color:       #ffffff;
       font-size:   60px;
       font-weight: 500;
       line-height: 60px;
       margin:      0 0 83px 0;
+      text-align:  left;
     }
     p {
       color:       #adadad;
@@ -299,6 +313,7 @@ h1, h2 {
     }
     .popup-wrapper {
       display:         flex;
+      flex-wrap:       wrap;
       width:           100%;
       justify-content: space-between;
       align-items:     flex-start;
@@ -342,7 +357,6 @@ h1, h2 {
 
 .footer {
   position:    relative;
-  overflow:    hidden;
   padding-top: 200px;
   .container {
     display:         flex;
@@ -351,10 +365,13 @@ h1, h2 {
     justify-content: flex-start;
   }
   .back-call {
-    position: absolute;
-    z-index:  0;
-    bottom:   -600px;
-    left:     0;
+    position:        absolute;
+    z-index:         0;
+    left:            0;
+    object-fit:      cover;
+    height:          100%;
+    object-position: top;
+    top:             0;
   }
   h2 {
     color:       #1b272f;
@@ -374,5 +391,338 @@ h1, h2 {
     line-height:   40px;
     text-align:    center;
     margin-bottom: 82px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .container {
+    width: 80%;
+  }
+  .button {
+    width:     40%;
+    font-size: 20px;
+    padding:   25px 0;
+  }
+  .header {
+    margin-bottom: 40px;
+    h1 {
+      font-size:     50px;
+      line-height:   50px;
+      margin-bottom: 26px;
+    }
+    h2 {
+      font-size:     36px;
+      line-height:   40px;
+      margin-bottom: 30px;
+    }
+  }
+  .main {
+    .person {
+      margin-top:  -30vw;
+      padding-top: 13vw;
+      .photo {
+        width:         20vw;
+        margin-bottom: 20px;
+      }
+      h2 {
+        font-size:     36px;
+        line-height:   1.5;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size:   18px;
+        line-height: 1.5;
+      }
+      .person-back {
+        height: auto;
+      }
+    }
+    .testimonial {
+      h2 {
+        margin-bottom: 30px;
+        font-size:     36px;
+        text-align:    center;
+      }
+      &__name {
+        width: 25%;
+        h3 {
+          font-size:     24px;
+          line-height:   1.2;
+          margin-bottom: 8px;
+        }
+        p {
+          font-size:     18px;
+          line-height:   1.2;
+          margin-bottom: 8px;
+        }
+        .stars {
+          width: 40%;
+        }
+      }
+      &__comment {
+        width: 75%;
+        p {
+          font-size:   18px;
+          line-height: 1.5;
+        }
+      }
+    }
+    .call {
+      h2 {
+        font-size:   36px;
+        line-height: 1.5;
+        margin:      0 0 50px;
+      }
+      .heading {
+        font-size:   18px;
+        line-height: 1.5;
+      }
+      &__image {
+        margin-bottom: 20px;
+        .col-4 {
+          img {
+            width: 20%;
+          }
+        }
+      }
+      &__way {
+        padding: 0 15px;
+        h3 {
+          font-size:     20px;
+          line-height:   1.5;
+          margin-bottom: 20px;
+        }
+        p {
+          font-size:   18px;
+          line-height: 1.4;
+        }
+      }
+    }
+    .with-popup {
+      h2 {
+        font-size:     36px;
+        line-height:   1.5;
+        margin-bottom: 40px;
+      }
+      .popup-wrapper {
+        .popup {
+          align-items: flex-start;
+          padding:     20px 15px 25px 15px;
+          p {
+            font-size:     16px;
+            margin-bottom: 20px;
+            line-height:   1.5;
+          }
+          .stars {
+            width:       45%;
+            padding-top: 10px;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    padding-top: 100px;
+    h2 {
+      font-size:     36px;
+      line-height:   1.5;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size:     18px;
+      line-height:   1.5;
+      margin-bottom: 30px;
+    }
+    .button {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .button {
+    width: 70%;
+  }
+  .main {
+    .person {
+      padding-top: 5vw;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  .button {
+    font-size:   16px;
+    line-height: 1;
+    padding:     10px;
+    text-align:  center;
+  }
+  .header {
+    margin-bottom: 0;
+    .modern-house {
+      top: -50px;
+    }
+    h1 {
+      font-size:     28px;
+      line-height:   1;
+      margin-bottom: 15px;
+    }
+    h2 {
+      font-size:     24px;
+      line-height:   1;
+      margin-bottom: 10px;
+    }
+  }
+  .main {
+    .testimonial {
+      margin-bottom: 0;
+      h2 {
+        font-size:     24px;
+        line-height:   1;
+        margin-bottom: 15px;
+      }
+      &__recommendation {
+        width:  80%;
+        margin: 0 auto;
+      }
+      &__name {
+        h3 {
+          font-size:   16px;
+          line-height: 1;
+        }
+        p {
+          font-size:   14px;
+          line-height: 1;
+        }
+      }
+      &__comment {
+        p {
+          font-size:   14px;
+          line-height: 1;
+        }
+      }
+    }
+    .call {
+      h2 {
+        font-size:     24px;
+        line-height:   1;
+        margin-bottom: 10px;
+      }
+      .heading {
+        font-size:     14px;
+        line-height:   1.5;
+        margin-bottom: 30px;
+      }
+      .container {
+        display:   flex;
+        flex-wrap: wrap;
+      }
+      &__image {
+        width:           30%;
+        flex-direction:  row;
+        justify-content: space-between;
+        align-items:     stretch;
+        flex-wrap:       wrap;
+        .col-4 {
+          justify-content: center;
+        }
+      }
+      &__way {
+        width:          70%;
+        flex-direction: column;
+      }
+      .col-4 {
+        width:         100%;
+        margin-bottom: 20px;
+        h3 {
+          font-size:     18px;
+          line-height:   1;
+          margin-bottom: 10px;
+        }
+        p {
+          width:       100%;
+          font-size:   14px;
+          line-height: 1.5;
+        }
+      }
+    }
+    .person {
+      padding-top: 10vw;
+      .photo {
+        margin-bottom: 10px;
+      }
+      h2 {
+        font-size:     24px;
+        line-height:   1;
+        margin-bottom: 0;
+      }
+      p {
+        font-size:   14px;
+        line-height: 1.5;
+      }
+    }
+    .with-popup {
+      h2 {
+        font-size:     24px;
+        line-height:   1;
+        margin-bottom: 20px;
+      }
+      .popup-wrapper {
+        .popup {
+          width:         100%;
+          margin-bottom: 20px;
+          .stars {
+            width: 15%;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    h2 {
+      font-size:     24px;
+      line-height:   1;
+      margin-bottom: 20px;
+    }
+    .button {
+      margin-bottom: 20px;
+    }
+    p {
+      font-size:   14px;
+      line-height: 1.5;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .header {
+    .modern-house {
+      top: -35px;
+    }
+  }
+  .main {
+    .testimonial {
+      &__recommendation {
+        width: 100%;
+      }
+    }
+    .person {
+      padding-top: 20vw;
+      margin-top:  -47vw;
+      .person-back {
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .main {
+    .person {
+      margin-top: -57vw;
+    }
   }
 }
