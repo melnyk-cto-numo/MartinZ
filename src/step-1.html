@@ -5,17 +5,18 @@
     <meta name='viewport'
           content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-    <link rel='stylesheet' href='assets/css/main.css'>
+    <link rel='stylesheet' href='./assets/css/main.css'>
     <title>Document</title>
 </head>
 <body>
 <main class='steps'>
+    <!--  BEGIN STEP 1  -->
     <img class='background' src='./assets/images/steps/background.jpg' alt=''>
-    <div class='steps-inner'>
+    <div id='step-1' class='steps-inner d-none'>
         <div class='steps-title'>
             <img src='./assets/images/steps/house.png' alt='house'>
             <h2>What’s the Real Value of My Home?</h2>
-            <h3>Get Guidance From This Short Quiz</h3>
+            <h5>Get Guidance From This Short Quiz</h5>
         </div>
         <form class='steps-form'>
             <label class='email'>
@@ -24,10 +25,234 @@
             <button type='button'>GET MY HOME VALUE</button>
         </form>
         <div class='notice'>
-            <h3>Get your home value in your inbox in seconds.</h3>
+            <h5>Get your home value in your inbox in seconds.</h5>
             <p>( sorry, but let's be honest it takes a bit longer than that )</p>
         </div>
     </div>
+    <!--  END STEP 1  -->
+    <!--  BEGIN STEP 2  -->
+    <div id='step-2' class='steps-inner d-none'>
+        <div class='steps-title'>
+            <img src='./assets/images/steps/property.png' alt='house'>
+            <h2>What kind of property do you own?</h2>
+        </div>
+        <form class='steps-form'>
+            <label class='checkbox'>
+                <input type='checkbox'>
+                <span class='checkbox-icon'></span>
+                Detached Home
+            </label>
+            <label class='checkbox'>
+                <input type='checkbox'>
+                <span class='checkbox-icon'></span>
+                Semi-Detached Home
+            </label>
+            <label class='checkbox'>
+                <input type='checkbox' checked>
+                <span class='checkbox-icon'></span>
+                Freehold Townhouse
+            </label>
+            <label class='checkbox'>
+                <input type='checkbox'>
+                <span class='checkbox-icon'></span>
+                Condo-Townhouse
+            </label>
+            <label class='checkbox'>
+                <input type='checkbox'>
+                <span class='checkbox-icon'></span>
+                Condo Apartment
+            </label>
+            <label class='checkbox'>
+                <input type='checkbox'>
+                <span class='checkbox-icon'></span>
+                Other
+            </label>
+        </form>
+    </div>
+    <!--  END STEP 2  -->
+    <!--  BEGIN STEP 3  -->
+    <div id='step-3' class='steps-inner d-none'>
+        <div class='steps-title'>
+            <img src='./assets/images/steps/build.png' alt='build'>
+            <h2>How long have you lived in your property?</h2>
+        </div>
+        <form class='steps-form'>
+            <label class='checkbox'>
+                <input type='checkbox'>
+                <span class='checkbox-icon'></span>
+                >1 Year
+            </label>
+            <label class='checkbox'>
+                <input type='checkbox'>
+                <span class='checkbox-icon'></span>
+                1-5
+            </label>
+            <label class='checkbox'>
+                <input type='checkbox' checked>
+                <span class='checkbox-icon'></span>
+                6-10
+            </label>
+            <label class='checkbox'>
+                <input type='checkbox'>
+                <span class='checkbox-icon'></span>
+                11-15
+            </label>
+            <label class='checkbox'>
+                <input type='checkbox'>
+                <span class='checkbox-icon'></span>
+                15+
+            </label>
+        </form>
+    </div>
+    <!--  END STEP 3  -->
+    <!--  BEGIN STEP 4  -->
+    <div id='step-4' class='steps-inner d-none'>
+        <div class='steps-title'>
+            <img src='./assets/images/steps/build.png' alt='build'>
+            <h2>How would you rate the condition of your home?</h2>
+            <h5>(Roof, foundations, insulation, appliances, HVAC, etc)</h5>
+        </div>
+        <form class='steps-form'>
+            <label class='checkbox'>
+                <input type='checkbox'>
+                <span class='checkbox-icon'></span>
+                Poor
+            </label>
+            <label class='checkbox'>
+                <input type='checkbox'>
+                <span class='checkbox-icon'></span>
+                Good
+            </label>
+            <label class='checkbox'>
+                <input type='checkbox' checked>
+                <span class='checkbox-icon'></span>
+                Great
+            </label>
+            <label class='checkbox'>
+                <input type='checkbox'>
+                <span class='checkbox-icon'></span>
+                Excellent
+            </label>
+        </form>
+    </div>
+    <!--  END STEP 4  -->
+    <!--  BEGIN STEP 5  -->
+    <div id='step-5' class='steps-inner d-none'>
+        <div class='steps-title'>
+            <img src='./assets/images/steps/double-home.png' alt='build'>
+            <h2>How would you rate your neighborhood?</h2>
+            <h5>(Convenient to school, shopping, entertainment, parks)</h5>
+        </div>
+        <form class='steps-form'>
+            <label class='checkbox'>
+                <input type='checkbox'>
+                <span class='checkbox-icon'></span>
+                Poor
+            </label>
+            <label class='checkbox'>
+                <input type='checkbox'>
+                <span class='checkbox-icon'></span>
+                Good
+            </label>
+            <label class='checkbox'>
+                <input type='checkbox' checked>
+                <span class='checkbox-icon'></span>
+                Great
+            </label>
+            <label class='checkbox'>
+                <input type='checkbox'>
+                <span class='checkbox-icon'></span>
+                Excellent
+            </label>
+        </form>
+    </div>
+    <!--  END STEP 5  -->
+    <!--  BEGIN STEP 6  -->
+    <div id='step-6' class='steps-inner d-none'>
+        <div class='steps-title'>
+            <img src='./assets/images/steps/cost-home.png' alt='cost-home'>
+            <h2>Now Let’s Analyze The True Value of Your Property.</h2>
+        </div>
+        <form class='steps-form'>
+            <label>
+                <input type='email' placeholder='Enter Your Street Address' required>
+            </label>
+            <label>
+                <input type='text' placeholder='Enter a location' required>
+            </label>
+            <label>
+                <input type='text' placeholder='Enter Unit number' required>
+            </label>
+            <button type='button'>NEXT</button>
+        </form>
+    </div>
+    <!--  END STEP 6  -->
+    <!--  BEGIN STEP 7  -->
+    <div id='step-7' class='steps-inner d-none'>
+        <div class='steps-title'>
+            <img src='./assets/images/steps/sell.png' alt='sell'>
+            <h2>When are you looking to sell your home?</h2>
+        </div>
+        <form class='steps-form'>
+            <label class='checkbox'>
+                <input type='checkbox'>
+                <span class='checkbox-icon'></span>
+                0-3 Months
+            </label>
+            <label class='checkbox'>
+                <input type='checkbox'>
+                <span class='checkbox-icon'></span>
+                3-6 Months
+            </label>
+            <label class='checkbox'>
+                <input type='checkbox' checked>
+                <span class='checkbox-icon'></span>
+                6-12 Months
+            </label>
+            <label class='checkbox'>
+                <input type='checkbox'>
+                <span class='checkbox-icon'></span>
+                Not Sure
+            </label>
+        </form>
+    </div>
+    <!--  END STEP 7  -->
+    <!--  BEGIN STEP 8  -->
+    <div id='step-8' class='steps-inner d-none'>
+        <div class='steps-title'>
+            <img src='./assets/images/steps/people.png' alt='people'>
+            <h2>What’s Your Name?</h2>
+        </div>
+        <form class='steps-form'>
+            <label>
+                <input type='text' placeholder='Enter Your Name' required>
+            </label>
+            <button type='button'>NEXT</button>
+        </form>
+    </div>
+    <!--  END STEP 8  -->
+    <!--  BEGIN STEP 9  -->
+    <div id='step-9' class='steps-inner'>
+        <div class='steps-title'>
+            <img src='./assets/images/steps/step-9.png' alt=''>
+            <h2>Ready For Your Results?</h2>
+            <h3 class='border-bottom'>Enter Your Mobile Number to Receive a Text Message When Your Report is Ready!</h3>
+            <h3>Your information is private and secure.</h3>
+        </div>
+        <form class='steps-form'>
+            <label>
+                <input type='tel' placeholder='Enter Your Mobile Number' required>
+            </label>
+            <button type='button'>GET THE TRUE VALUE OF MY HOME</button>
+        </form>
+        <div class='notice'>
+            <h5>
+                This is a detailed report that takes time to prepare for you. You have our guarantee it will be
+                delivered in the next 24 hours.
+            </h5>
+        </div>
+    </div>
+    <!--  END STEP 9  -->
 </main>
 </body>
 </html>
