@@ -1,5 +1,6 @@
 @import "font";
 @import "variables";
+@import "steps";
 
 @media (any-hover: hover) {
   .button:hover {
@@ -42,7 +43,8 @@ body {
 }
 
 main {
-  flex: 1 0 auto;
+  flex:     1 0 auto;
+  position: relative;
 }
 
 footer {
@@ -52,6 +54,10 @@ footer {
 h1, h2 {
   text-align: center;
   width:      100%;
+}
+
+.d-none {
+  display: none !important;
 }
 
 .container {

@@ -1,0 +1,306 @@
+@import "variables";
+
+@media (any-hover: hover) {
+  .steps {
+    button:hover {
+      color: $mainColor;
+      &:before {
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+.steps {
+  background-color: #1b272f;
+  color:            $white;
+  display:          flex;
+  align-items:      center;
+  justify-content:  center;
+  h2 {
+    font-size:     3.125rem;
+    line-height:   0.92;
+    font-weight:   500;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size:   1.875rem;
+    line-height: 1.2;
+    font-weight: normal;
+  }
+  h4 {
+    font-size:   1.5rem;
+    line-height: 1.875;
+    font-weight: normal;
+  }
+  h5 {
+    font-size:   1.375rem;
+    line-height: 1.09;
+    font-weight: 700;
+  }
+  p {
+    font-size:   1rem;
+    line-height: 1.5;
+    font-weight: 300;
+  }
+  label {
+    margin-bottom: 1rem;
+    width:         28.75rem;
+    input {
+      background-color: $white;
+      padding:          1rem 2rem;
+      box-shadow:       none;
+      border-radius:    0.625rem;
+      font-size:        1.875rem;
+      line-height:      1.53;
+      font-weight:      300;
+      width:            100%;
+      height:           6.25rem;
+      border:           0.125rem solid transparent;
+      &::placeholder {
+        color:       #a7a7a7;
+        font-size:   1.875rem;
+        line-height: 1.53;
+        font-weight: 300;
+      }
+      &:focus {
+        border: 0.125rem solid $mainColor;
+      }
+    }
+    &.email {
+      position: relative;
+      input {
+        padding-left: 5.0625rem;
+      }
+      &:before {
+        content:         '';
+        background:      url("../images/steps/email.png") center center no-repeat;
+        background-size: cover;
+        position:        absolute;
+        z-index:         1;
+        left:            1.875rem;
+        top:             50%;
+        width:           1.8125rem;
+        height:          1.375rem;
+        transform:       translateY(-50%);
+      }
+    }
+    &.checkbox:nth-child(1) {
+      border-top: 0.0625rem dashed $white;
+    }
+    &.checkbox {
+      display:       flex;
+      align-items:   center;
+      font-size:     1.5rem;
+      line-height:   3;
+      font-weight:   normal;
+      cursor:        pointer;
+      border-bottom: 0.0625rem dashed $white;
+      margin-bottom: 0;
+      .checkbox-icon {
+        width:            2.5625rem;
+        height:           2.5625rem;
+        background-color: $white;
+        border-radius:    0.625rem;
+        margin-right:     2.09375rem;
+        position:         relative;
+      }
+      input {
+        display: none;
+        &:checked + .checkbox-icon:before {
+          content:         '';
+          background:      url("../images/steps/checked.png") center center no-repeat;
+          background-size: contain;
+          position:        absolute;
+          left:            65%;
+          top:             50%;
+          transform:       translate(-50%, -50%);
+          width:           2.4375rem;
+          height:          1.5625rem;
+        }
+      }
+    }
+  }
+  button {
+    height:           6.25rem;
+    position:         relative;
+    z-index:          1;
+    cursor:           pointer;
+    background-color: $mainColor;
+    padding:          1rem 2rem;
+    border:           none;
+    box-shadow:       none;
+    border-radius:    0.625rem;
+    color:            $white;
+    font-size:        1.875rem;
+    line-height:      1.53;
+    font-weight:      700;
+    letter-spacing:   0.09375rem;
+    overflow:         hidden;
+    transition:       .3s linear;
+    margin-bottom:    1.5rem;
+    &:before {
+      content:          '';
+      border-radius:    0.625rem;
+      background-color: $white;
+      position:         absolute;
+      z-index:          -1;
+      transform:        translateX(100%);
+      top:              0;
+      right:            0;
+      width:            100%;
+      height:           100%;
+      transition:       .3s linear;
+    }
+    &:active {
+      color:   $mainColor;
+      opacity: .7;
+      &:before {
+        transform: translateX(0);
+      }
+    }
+  }
+  .background {
+    position:        absolute;
+    object-fit:      cover;
+    object-position: center center;
+    z-index:         1;
+    width:           100%;
+    height:          100%;
+    opacity:         0.2;
+  }
+  &-inner {
+    padding:         2rem 1rem;
+    position:        relative;
+    z-index:         2;
+    width:           100%;
+    text-align:      center;
+    display:         flex;
+    align-items:     center;
+    justify-content: flex-start;
+    flex-direction:  column;
+  }
+  &-title {
+    margin-bottom: 12.75rem;
+    img {
+      width:         3.75rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+  &-form {
+    display:        flex;
+    flex-direction: column;
+  }
+}
+
+
+#step-2 {
+  &.steps-inner {
+    margin-bottom: 1.5rem;
+  }
+  .steps-title {
+    margin-bottom: 2rem;
+  }
+}
+
+#step-3 {
+  &.steps-inner {
+    margin-bottom: 6rem;
+  }
+  .steps-title {
+    margin-bottom: 2rem;
+  }
+}
+
+#step-4, #step-5 {
+  &.steps-inner {
+    margin-bottom: 4rem;
+  }
+  h2 {
+    margin-bottom: 2rem;
+  }
+  .steps-title {
+    margin-bottom: 5.25rem;
+    img {
+      width: 8.75rem;
+    }
+  }
+}
+
+#step-6 {
+  input {
+    padding: 1rem 1.25rem;
+  }
+  &.steps-inner {
+    margin-bottom: -3rem;
+  }
+  .steps-title {
+    margin-bottom: 4.5rem;
+  }
+}
+
+#step-7 {
+  &.steps-inner {
+    margin-bottom: 5rem;
+  }
+  .steps-title {
+    margin-bottom: 9rem;
+    img {
+      width: 5rem;
+    }
+  }
+}
+
+#step-8 {
+  input {
+    padding: 1rem 1.25rem;
+  }
+  &.steps-inner {
+    margin-bottom: 11rem;
+  }
+  .steps-title {
+    margin-bottom: 4.5rem;
+    img {
+      width: 5.5rem;
+    }
+  }
+}
+
+#step-9 {
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+  .border-bottom {
+    position:       relative;
+    padding-bottom: 1.25rem;
+    margin-bottom:  1rem;
+    &:before {
+      content:       '';
+      position:      absolute;
+      bottom:        0;
+      left:          50%;
+      transform:     translateX(-50%);
+      width:         80%;
+      height:        0.0625rem;
+      border-bottom: 2px dashed $mainColor;
+    }
+  }
+  label {
+    width: 58.75rem;
+    input {
+      padding: 1rem 1.25rem;
+    }
+  }
+  &.steps-inner {
+    margin-bottom: 3.5rem;
+  }
+  .steps-title {
+    margin-bottom: 2rem;
+    img {
+      width: 3.5rem;
+    }
+  }
+  .steps-form {
+    margin-bottom: 2rem;
+  }
+}
