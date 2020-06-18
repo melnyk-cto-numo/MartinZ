@@ -1,0 +1,147 @@
+@import "variables";
+
+@media (any-hover: hover) {
+  .steps {
+    button:hover {
+      color: $mainColor;
+      &:before {
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+.steps {
+  label {
+    margin-bottom: 1rem;
+    input {
+      background-color: $white;
+      padding:          1rem 2rem;
+      box-shadow:       none;
+      border-radius:    0.625rem;
+      font-size:        1.875rem;
+      line-height:      1.53;
+      font-weight:      300;
+      width:            28.75rem;
+      height:           6.25rem;
+      border:           0.125rem solid transparent;
+      &::placeholder {
+        color:       #a7a7a7;
+        font-size:   1.875rem;
+        line-height: 1.53;
+        font-weight: 300;
+      }
+      &:focus {
+        border: 0.125rem solid $mainColor;
+      }
+    }
+    &.email {
+      position: relative;
+      input {
+        padding-left: 5.0625rem;
+      }
+      &:before {
+        content:         '';
+        background:      url("../images/steps/email.png") center center no-repeat;
+        background-size: cover;
+        position:        absolute;
+        z-index:         1;
+        left:            1.875rem;
+        top:             50%;
+        width:           1.8125rem;
+        height:          1.375rem;
+        transform:       translateY(-50%);
+      }
+    }
+  }
+  button {
+    height:           6.25rem;
+    position:         relative;
+    z-index:          1;
+    cursor:           pointer;
+    background-color: $mainColor;
+    padding:          1rem 2rem;
+    border:           none;
+    box-shadow:       none;
+    border-radius:    0.625rem;
+    color:            $white;
+    font-size:        1.875rem;
+    line-height:      1.53;
+    font-weight:      700;
+    letter-spacing:   0.09375rem;
+    overflow:         hidden;
+    transition:       .3s linear;
+    margin-bottom:    1.5rem;
+    &:before {
+      content:          '';
+      border-radius:    0.625rem;
+      background-color: $white;
+      position:         absolute;
+      z-index:          -1;
+      transform:        translateX(100%);
+      top:              0;
+      right:            0;
+      width:            100%;
+      height:           100%;
+      transition:       .3s linear;
+    }
+    &:active {
+      color:   $mainColor;
+      opacity: .7;
+      &:before {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  background-color: #1b272f;
+  h2 {
+    font-size:      3.125rem;
+    line-height:    0.92;
+    font-weight:    500;
+    padding-bottom: 1rem;
+  }
+  h3 {
+    font-size:   1.375rem;
+    line-height: 1.09;
+    font-weight: 700;
+  }
+  p {
+    font-size:   1rem;
+    line-height: 1.5;
+    font-weight: 300;
+  }
+
+  color:            $white;
+  .background {
+    position:        absolute;
+    object-fit:      cover;
+    object-position: center center;
+    z-index:         1;
+    width:           100%;
+    height:          100%;
+    opacity:         0.2;
+  }
+  &-inner {
+    position:        relative;
+    z-index:         2;
+    width:           100%;
+    height:          100%;
+    text-align:      center;
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    flex-direction:  column;
+  }
+  &-title {
+    margin-bottom: 12.75rem;
+    img {
+      width:         3.75rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+  &-form {
+    display:        flex;
+    flex-direction: column;
+  }
+}
