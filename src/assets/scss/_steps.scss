@@ -5,9 +5,38 @@
     button:hover {
       color: $mainColor;
       &:before {
-        transform: translateX(0);
+        transform: translateX(-5%);
       }
     }
+  }
+}
+
+.progress {
+  width:       100%;
+  max-width:   40rem;
+  display:     flex;
+  align-items: center;
+  white-space: nowrap;
+  &-bar {
+    width:            100%;
+    height:           1rem;
+    border-radius:    0.625rem;
+    background-color: $white;
+    overflow:         hidden;
+    position:         relative;
+    z-index:          2;
+    margin-left:      1rem;
+  }
+  span {
+    position:         absolute;
+    z-index:          1;
+    left:             0;
+    top:              0;
+    width:            100%;
+    height:           100%;
+    background-color: $mainColor;
+    border-radius:    0.625rem 0 0 0.625rem;
+    transform:        translateX(0%);
   }
 }
 
@@ -15,8 +44,10 @@
   background-color: #1b272f;
   color:            $white;
   display:          flex;
+  flex-direction:   column;
   align-items:      center;
   justify-content:  center;
+  padding:          2rem 1rem;
   h2 {
     font-size:     3.125rem;
     line-height:   0.92;
@@ -43,9 +74,13 @@
     line-height: 1.5;
     font-weight: 300;
   }
+  form {
+    width: 100%;
+  }
   label {
-    margin-bottom: 1rem;
-    width:         28.75rem;
+    margin:    0 auto 1rem auto;
+    width:     100%;
+    max-width: 28.75rem;
     input {
       background-color: $white;
       padding:          1rem 2rem;
@@ -85,10 +120,15 @@
         transform:       translateY(-50%);
       }
     }
-    &.checkbox:nth-child(1) {
+    &.radio:nth-child(1) {
       border-top: 0.0625rem dashed $white;
     }
-    &.checkbox {
+    .radioTitle {
+      width:        100%;
+      padding-left: 4.6875rem;
+      text-align:   left;
+    }
+    &.radio {
       display:       flex;
       align-items:   center;
       font-size:     1.5rem;
@@ -97,17 +137,21 @@
       cursor:        pointer;
       border-bottom: 0.0625rem dashed $white;
       margin-bottom: 0;
-      .checkbox-icon {
+      position:      relative;
+      .radio-icon {
         width:            2.5625rem;
         height:           2.5625rem;
         background-color: $white;
         border-radius:    0.625rem;
         margin-right:     2.09375rem;
-        position:         relative;
+        position:         absolute;
+        z-index:          0;
+        pointer-events:   none;
+        left:             0;
       }
       input {
         display: none;
-        &:checked + .checkbox-icon:before {
+        &:checked + .radio-icon:before {
           content:         '';
           background:      url("../images/steps/checked.png") center center no-repeat;
           background-size: contain;
@@ -124,7 +168,7 @@
   button {
     height:           6.25rem;
     position:         relative;
-    z-index:          1;
+    z-index:          3;
     cursor:           pointer;
     background-color: $mainColor;
     padding:          1rem 2rem;
@@ -138,16 +182,18 @@
     letter-spacing:   0.09375rem;
     overflow:         hidden;
     transition:       .3s linear;
-    margin-bottom:    1.5rem;
+    margin:           0 auto 1.5rem auto;
+    width:            100%;
+    max-width:        28.75rem;
     &:before {
       content:          '';
       border-radius:    0.625rem;
       background-color: $white;
       position:         absolute;
       z-index:          -1;
-      transform:        translateX(100%);
+      transform:        translateX(110%);
       top:              0;
-      right:            0;
+      right:            -5%;
       width:            100%;
       height:           100%;
       transition:       .3s linear;
@@ -156,9 +202,15 @@
       color:   $mainColor;
       opacity: .7;
       &:before {
-        transform: translateX(0);
+        transform: translateX(-5%);
       }
     }
+  }
+  .btn-back {
+    width:            auto;
+    height:           auto;
+    background-color: #3e3e3e;
+    font-size:        1rem;
   }
   .background {
     position:        absolute;
@@ -282,14 +334,17 @@
       transform:     translateX(-50%);
       width:         80%;
       height:        0.0625rem;
-      border-bottom: 2px dashed $mainColor;
+      border-bottom: 0.125rem dashed $mainColor;
     }
   }
   label {
-    width: 58.75rem;
+    max-width: 58.75rem;
     input {
       padding: 1rem 1.25rem;
     }
+  }
+  button {
+    max-width: 58.75rem;
   }
   &.steps-inner {
     margin-bottom: 3.5rem;
@@ -302,5 +357,11 @@
   }
   .steps-form {
     margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 8px;
   }
 }

@@ -1,0 +1,48 @@
+.header {
+  position:       relative;
+  padding-top:    27.8vw;
+  padding-bottom: 6.5vw;
+  margin-bottom:  86px;
+  .container {
+    display:         flex;
+    flex-direction:  column;
+    justify-content: center;
+    align-items:     center;
+  }
+  .top-back {
+    position: absolute;
+    //object-fit: cover;
+    height:   100%;
+    z-index:  0;
+    top:      0;
+    left:     0;
+  }
+  .modern-house {
+    width:     61.4vw;
+    max-width: 1180px;
+    position:  absolute;
+    top:       -160px;
+    transform: translate(-50%, 0);
+    left:      50%;
+  }
+  h1 {
+    font-size:     72px;
+    line-height:   72px;
+    color:         #ffffff;
+    font-weight:   400;
+    margin-bottom: 46px;
+    .text {
+      font-weight: 700;
+    }
+    .question {
+      font-weight: 500;
+    }
+  }
+  h2 {
+    color:       #e4a11b;
+    font-size:   52px;
+    font-weight: 500;
+    line-height: 60px;
+    margin:      0 0 56px 0;
+  }
+}

@@ -10,9 +10,15 @@
 </head>
 <body>
 <main class='steps'>
+    <div class='progress'>
+        <div> Your progress</div>
+        <div class='progress-bar'>
+            <span id='percent'></span>
+        </div>
+    </div>
     <!--  BEGIN STEP 1  -->
     <img class='background' src='./assets/images/steps/background.jpg' alt=''>
-    <div id='step-1' class='steps-inner d-none'>
+    <div id='step-1' class='steps-inner'>
         <div class='steps-title'>
             <img src='./assets/images/steps/house.png' alt='house'>
             <h2>What’s the Real Value of My Home?</h2>
@@ -22,7 +28,7 @@
             <label class='email'>
                 <input type='email' placeholder='Enter your email address.' required>
             </label>
-            <button type='button'>GET MY HOME VALUE</button>
+            <button type='button' class='js-next'>GET MY HOME VALUE</button>
         </form>
         <div class='notice'>
             <h5>Get your home value in your inbox in seconds.</h5>
@@ -37,35 +43,36 @@
             <h2>What kind of property do you own?</h2>
         </div>
         <form class='steps-form'>
-            <label class='checkbox'>
-                <input type='checkbox'>
-                <span class='checkbox-icon'></span>
-                Detached Home
+            <label class='radio'>
+                <input type='radio' name='What kind of property do you own?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>Detached Home</span>
+
             </label>
-            <label class='checkbox'>
-                <input type='checkbox'>
-                <span class='checkbox-icon'></span>
-                Semi-Detached Home
+            <label class='radio'>
+                <input type='radio' name='What kind of property do you own?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>Semi-Detached Home</span>
             </label>
-            <label class='checkbox'>
-                <input type='checkbox' checked>
-                <span class='checkbox-icon'></span>
-                Freehold Townhouse
+            <label class='radio'>
+                <input type='radio' name='What kind of property do you own?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>Freehold Townhouse</span>
             </label>
-            <label class='checkbox'>
-                <input type='checkbox'>
-                <span class='checkbox-icon'></span>
-                Condo-Townhouse
+            <label class='radio'>
+                <input type='radio' name='What kind of property do you own?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>Condo-Townhouse</span>
             </label>
-            <label class='checkbox'>
-                <input type='checkbox'>
-                <span class='checkbox-icon'></span>
-                Condo Apartment
+            <label class='radio'>
+                <input type='radio' name='What kind of property do you own?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>Condo Apartment</span>
             </label>
-            <label class='checkbox'>
-                <input type='checkbox'>
-                <span class='checkbox-icon'></span>
-                Other
+            <label class='radio'>
+                <input type='radio' name='What kind of property do you own?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>Other</span>
             </label>
         </form>
     </div>
@@ -77,30 +84,30 @@
             <h2>How long have you lived in your property?</h2>
         </div>
         <form class='steps-form'>
-            <label class='checkbox'>
-                <input type='checkbox'>
-                <span class='checkbox-icon'></span>
-                >1 Year
+            <label class='radio'>
+                <input type='radio' name='How long have you lived in your property?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>>1 Year</span>
             </label>
-            <label class='checkbox'>
-                <input type='checkbox'>
-                <span class='checkbox-icon'></span>
-                1-5
+            <label class='radio'>
+                <input type='radio' name='How long have you lived in your property?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>1-5</span>
             </label>
-            <label class='checkbox'>
-                <input type='checkbox' checked>
-                <span class='checkbox-icon'></span>
-                6-10
+            <label class='radio'>
+                <input type='radio' name='How long have you lived in your property?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>6-10</span>
             </label>
-            <label class='checkbox'>
-                <input type='checkbox'>
-                <span class='checkbox-icon'></span>
-                11-15
+            <label class='radio'>
+                <input type='radio' name='How long have you lived in your property?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>11-15</span>
             </label>
-            <label class='checkbox'>
-                <input type='checkbox'>
-                <span class='checkbox-icon'></span>
-                15+
+            <label class='radio'>
+                <input type='radio' name='How long have you lived in your property?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>15+</span>
             </label>
         </form>
     </div>
@@ -113,25 +120,25 @@
             <h5>(Roof, foundations, insulation, appliances, HVAC, etc)</h5>
         </div>
         <form class='steps-form'>
-            <label class='checkbox'>
-                <input type='checkbox'>
-                <span class='checkbox-icon'></span>
-                Poor
+            <label class='radio'>
+                <input type='radio' name='How would you rate the condition of your home?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>Poor</span>
             </label>
-            <label class='checkbox'>
-                <input type='checkbox'>
-                <span class='checkbox-icon'></span>
-                Good
+            <label class='radio'>
+                <input type='radio' name='How would you rate the condition of your home?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>Good</span>
             </label>
-            <label class='checkbox'>
-                <input type='checkbox' checked>
-                <span class='checkbox-icon'></span>
-                Great
+            <label class='radio'>
+                <input type='radio' name='How would you rate the condition of your home?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>Great</span>
             </label>
-            <label class='checkbox'>
-                <input type='checkbox'>
-                <span class='checkbox-icon'></span>
-                Excellent
+            <label class='radio'>
+                <input type='radio' name='How would you rate the condition of your home?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>Excellent</span>
             </label>
         </form>
     </div>
@@ -144,25 +151,25 @@
             <h5>(Convenient to school, shopping, entertainment, parks)</h5>
         </div>
         <form class='steps-form'>
-            <label class='checkbox'>
-                <input type='checkbox'>
-                <span class='checkbox-icon'></span>
-                Poor
+            <label class='radio'>
+                <input type='radio' name='How would you rate your neighborhood?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>Poor</span>
             </label>
-            <label class='checkbox'>
-                <input type='checkbox'>
-                <span class='checkbox-icon'></span>
-                Good
+            <label class='radio'>
+                <input type='radio' name='How would you rate your neighborhood?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>Good</span>
             </label>
-            <label class='checkbox'>
-                <input type='checkbox' checked>
-                <span class='checkbox-icon'></span>
-                Great
+            <label class='radio'>
+                <input type='radio' name='How would you rate your neighborhood?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>Great</span>
             </label>
-            <label class='checkbox'>
-                <input type='checkbox'>
-                <span class='checkbox-icon'></span>
-                Excellent
+            <label class='radio'>
+                <input type='radio' name='How would you rate your neighborhood?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>Excellent</span>
             </label>
         </form>
     </div>
@@ -183,7 +190,7 @@
             <label>
                 <input type='text' placeholder='Enter Unit number' required>
             </label>
-            <button type='button'>NEXT</button>
+            <button type='button' class='js-next'>NEXT</button>
         </form>
     </div>
     <!--  END STEP 6  -->
@@ -194,25 +201,25 @@
             <h2>When are you looking to sell your home?</h2>
         </div>
         <form class='steps-form'>
-            <label class='checkbox'>
-                <input type='checkbox'>
-                <span class='checkbox-icon'></span>
-                0-3 Months
+            <label class='radio'>
+                <input type='radio' name='When are you looking to sell your home?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>0-3 Months</span>
             </label>
-            <label class='checkbox'>
-                <input type='checkbox'>
-                <span class='checkbox-icon'></span>
-                3-6 Months
+            <label class='radio'>
+                <input type='radio' name='When are you looking to sell your home?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>3-6 Months</span>
             </label>
-            <label class='checkbox'>
-                <input type='checkbox' checked>
-                <span class='checkbox-icon'></span>
-                6-12 Months
+            <label class='radio'>
+                <input type='radio' name='When are you looking to sell your home?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>6-12 Months</span>
             </label>
-            <label class='checkbox'>
-                <input type='checkbox'>
-                <span class='checkbox-icon'></span>
-                Not Sure
+            <label class='radio'>
+                <input type='radio' name='When are you looking to sell your home?'>
+                <span class='radio-icon'></span>
+                <span class='radioTitle'>Not Sure</span>
             </label>
         </form>
     </div>
@@ -227,12 +234,12 @@
             <label>
                 <input type='text' placeholder='Enter Your Name' required>
             </label>
-            <button type='button'>NEXT</button>
+            <button type='button' class='js-next'>NEXT</button>
         </form>
     </div>
     <!--  END STEP 8  -->
     <!--  BEGIN STEP 9  -->
-    <div id='step-9' class='steps-inner'>
+    <div id='step-9' class='steps-inner d-none'>
         <div class='steps-title'>
             <img src='./assets/images/steps/step-9.png' alt=''>
             <h2>Ready For Your Results?</h2>
@@ -247,12 +254,16 @@
         </form>
         <div class='notice'>
             <h5>
-                This is a detailed report that takes time to prepare for you. You have our guarantee it will be
+                This is a  kdetailed report that takes time to prepare for you. You have our guarantee it will be
                 delivered in the next 24 hours.
             </h5>
         </div>
     </div>
     <!--  END STEP 9  -->
+
+    <button class='btn-back js-back'>Back</button>
 </main>
+
+<script src='./assets/js/main.js'></script>
 </body>
 </html>
