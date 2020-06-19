@@ -16,6 +16,7 @@
             <span id='percent'></span>
         </div>
     </div>
+
     <!--  BEGIN STEP 1  -->
     <img class='background' src='./assets/images/steps/background.jpg' alt=''>
     <div id='step-1' class='steps-inner'>
@@ -26,9 +27,10 @@
         </div>
         <form class='steps-form'>
             <label class='email'>
-                <input type='email' placeholder='Enter your email address.' required>
+                <span class='error-message'></span>
+                <input id='email' type='email' placeholder='Enter your email address.'>
             </label>
-            <button type='button' class='js-next'>GET MY HOME VALUE</button>
+            <button id='step1Button' type='button'>GET MY HOME VALUE</button>
         </form>
         <div class='notice'>
             <h5>Get your home value in your inbox in seconds.</h5>
@@ -36,6 +38,7 @@
         </div>
     </div>
     <!--  END STEP 1  -->
+
     <!--  BEGIN STEP 2  -->
     <div id='step-2' class='steps-inner d-none'>
         <div class='steps-title'>
@@ -77,6 +80,7 @@
         </form>
     </div>
     <!--  END STEP 2  -->
+
     <!--  BEGIN STEP 3  -->
     <div id='step-3' class='steps-inner d-none'>
         <div class='steps-title'>
@@ -112,6 +116,7 @@
         </form>
     </div>
     <!--  END STEP 3  -->
+
     <!--  BEGIN STEP 4  -->
     <div id='step-4' class='steps-inner d-none'>
         <div class='steps-title'>
@@ -143,6 +148,7 @@
         </form>
     </div>
     <!--  END STEP 4  -->
+
     <!--  BEGIN STEP 5  -->
     <div id='step-5' class='steps-inner d-none'>
         <div class='steps-title'>
@@ -174,6 +180,7 @@
         </form>
     </div>
     <!--  END STEP 5  -->
+
     <!--  BEGIN STEP 6  -->
     <div id='step-6' class='steps-inner d-none'>
         <div class='steps-title'>
@@ -182,18 +189,20 @@
         </div>
         <form class='steps-form'>
             <label>
-                <input type='email' placeholder='Enter Your Street Address' required>
+                <span class='error-message'></span>
+                <input id='streetAddress' type='text' placeholder='Enter Your Street Address'>
             </label>
             <label>
-                <input type='text' placeholder='Enter a location' required>
+                <input id='location' type='text' placeholder='Enter a location'>
             </label>
             <label>
-                <input type='text' placeholder='Enter Unit number' required>
+                <input id='unitNumber' type='number' placeholder='Enter Unit number'>
             </label>
-            <button type='button' class='js-next'>NEXT</button>
+            <button id='step6Button' type='button'>NEXT</button>
         </form>
     </div>
     <!--  END STEP 6  -->
+
     <!--  BEGIN STEP 7  -->
     <div id='step-7' class='steps-inner d-none'>
         <div class='steps-title'>
@@ -224,6 +233,7 @@
         </form>
     </div>
     <!--  END STEP 7  -->
+
     <!--  BEGIN STEP 8  -->
     <div id='step-8' class='steps-inner d-none'>
         <div class='steps-title'>
@@ -232,12 +242,14 @@
         </div>
         <form class='steps-form'>
             <label>
-                <input type='text' placeholder='Enter Your Name' required>
+                <span class='error-message'></span>
+                <input id='name' type='text' placeholder='Enter Your Name'>
             </label>
-            <button type='button' class='js-next'>NEXT</button>
+            <button id='step8Button' type='button'>NEXT</button>
         </form>
     </div>
     <!--  END STEP 8  -->
+
     <!--  BEGIN STEP 9  -->
     <div id='step-9' class='steps-inner d-none'>
         <div class='steps-title'>
@@ -248,20 +260,21 @@
         </div>
         <form class='steps-form'>
             <label>
-                <input type='tel' placeholder='Enter Your Mobile Number' required>
+                <span class='error-message'></span>
+                <input id='yourMobile' type='tel' placeholder='Enter Your Mobile Number'>
             </label>
-            <button type='button'>GET THE TRUE VALUE OF MY HOME</button>
+            <button id='step9Button' type='button'>GET THE TRUE VALUE OF MY HOME</button>
         </form>
         <div class='notice'>
             <h5>
-                This is a  kdetailed report that takes time to prepare for you. You have our guarantee it will be
+                This is a kdetailed report that takes time to prepare for you. You have our guarantee it will be
                 delivered in the next 24 hours.
             </h5>
         </div>
     </div>
     <!--  END STEP 9  -->
 
-    <button class='btn-back js-back'>Back</button>
+    <button id='back' class='btn-back'>Back</button>
 </main>
 
 <script src='./assets/js/main.js'></script>

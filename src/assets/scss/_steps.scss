@@ -40,6 +40,15 @@
   }
 }
 
+.error-message {
+  color:     red;
+  position:  absolute;
+  left:      0;
+  top:       -1.25rem;
+  font-size: 0.75rem;
+
+}
+
 .steps {
   background-color: #1b272f;
   color:            $white;
@@ -81,6 +90,7 @@
     margin:    0 auto 1rem auto;
     width:     100%;
     max-width: 28.75rem;
+    position:  relative;
     input {
       background-color: $white;
       padding:          1rem 2rem;
