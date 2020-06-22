@@ -1,8 +1,13 @@
+@import "./variables";
+
 .header {
-  position:       relative;
-  padding-top:    27.8vw;
-  padding-bottom: 6.5vw;
-  margin-bottom:  86px;
+  position:        relative;
+  padding-bottom:  8vw;
+  margin-bottom:   80px;
+  display:         flex;
+  justify-content: center;
+  align-items:     center;
+  flex-direction:  column;
   .container {
     display:         flex;
     flex-direction:  column;
@@ -10,27 +15,26 @@
     align-items:     center;
   }
   .top-back {
-    position: absolute;
-    //object-fit: cover;
-    height:   100%;
-    z-index:  0;
-    top:      0;
-    left:     0;
+    position:        absolute;
+    object-fit:      cover;
+    object-position: center bottom;
+    height:          100%;
+    z-index:         0;
+    top:             0;
+    left:            0;
   }
   .modern-house {
-    width:     61.4vw;
-    max-width: 1180px;
-    position:  absolute;
-    top:       -160px;
-    transform: translate(-50%, 0);
-    left:      50%;
+    width:    61.5%;
+    margin:   -8.8% auto 46px;
+    position: relative;
+    z-index:  2;
   }
   h1 {
     font-size:     72px;
-    line-height:   72px;
-    color:         #ffffff;
+    line-height:   1;
+    color:         $white;
     font-weight:   400;
-    margin-bottom: 46px;
+    margin-bottom: 38px;
     .text {
       font-weight: 700;
     }
@@ -42,7 +46,33 @@
     color:       #e4a11b;
     font-size:   52px;
     font-weight: 500;
-    line-height: 60px;
+    line-height: 1.15;
     margin:      0 0 56px 0;
+  }
+}
+
+
+@media screen and (max-width: 991.98px) {
+  .header {
+    h1 {
+      font-size:     40px;
+      margin-bottom: 26px;
+    }
+    h2 {
+      font-size:     29px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .header {
+    margin-bottom: 40px;
+    h1 {
+      font-size: 24px;
+    }
+    h2 {
+      font-size: 18px;
+    }
   }
 }

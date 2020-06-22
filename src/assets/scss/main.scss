@@ -63,8 +63,9 @@ h1, h2 {
 }
 
 .container {
-  width:     70%;
-  max-width: 1400px;
+  width:     100%;
+  max-width: 1450px;
+  padding:   0 15px;
   margin:    0 auto;
   position:  relative;
 }
@@ -79,9 +80,9 @@ h1, h2 {
   background-color: #e4a11b;
   color:            #ffffff;
   font-size:        30px;
+  line-height:      1;
   font-weight:      700;
-  line-height:      30px;
-  padding:          40px 0;
+  padding:          36px 0;
 }
 
 .stars {
@@ -98,17 +99,19 @@ h1, h2 {
 
 
 .main {
+  h2 {
+    font-size:   60px;
+    line-height: 1;
+    font-weight: 500;
+  }
   .testimonial {
     display:       flex;
     width:         100%;
     margin-bottom: 77px;
     h2 {
-      color:       #1b272f;
-      font-size:   60px;
-      font-weight: 500;
-      line-height: 60px;
-      text-align:  left;
-      margin:      0 0 99px 0;
+      color:         #1b272f;
+      text-align:    left;
+      margin-bottom: 90px;
     }
     &__recommendation {
       display:     flex;
@@ -121,44 +124,45 @@ h1, h2 {
       flex-direction:  column;
       align-items:     flex-start;
       justify-content: center;
-      width:           13.6%;
+      min-width:       196px;
+      max-width:       196px;
       padding-right:   10px;
       h3 {
         color:       #000000;
         font-size:   36px;
         font-weight: 400;
-        line-height: 36px;
-        margin:      0 0 17px 0;
+        line-height: 1;
+        margin:      0 0 6px 0;
       }
       p {
         color:       #adadad;
         font-size:   24px;
         font-weight: 400;
-        line-height: 36px;
-        margin:      0 0 17px 0;
+        line-height: 1.5;
+        margin:      0 0 6px 0;
       }
     }
     &__comment {
       display:         flex;
       align-items:     center;
-      justify-content: center;
-      width:           86.4%;
+      justify-content: flex-start;
+      padding-left:    3.3%;
+      max-width:       76rem;
       p {
-        width:       93%;
         color:       #adadad;
         font-size:   28px;
         font-weight: 300;
-        line-height: 36px;
+        line-height: 1.28;
       }
     }
   }
   .call {
     display:        flex;
     width:          100%;
-    padding-top:    11vw;
-    padding-bottom: 16vw;
+    padding-top:    200px;
+    padding-bottom: 530px;
     position:       relative;
-    margin-bottom:  22px;
+    margin-bottom:  0;
     .back-call {
       position:        absolute;
       object-fit:      cover;
@@ -169,30 +173,32 @@ h1, h2 {
       top:             0;
     }
     h2 {
-      color:       #e4a11b;
-      font-size:   60px;
-      font-weight: 500;
-      line-height: 60px;
-      margin:      0 0 70px 0;
+      color:  #e4a11b;
+      margin: 0 0 64px 0;
     }
     .heading {
       text-align:  center;
       color:       #1b272f;
       font-size:   30px;
+      line-height: 1.33;
       font-weight: 300;
-      line-height: 40px;
       margin:      0 0 74px 0;
     }
     &__image {
-      display:         flex;
-      justify-content: space-between;
-      width:           100%;
-      align-items:     center;
-      margin-bottom:   70px;
+      width:         100%;
+      text-align:    center;
+      height:        116px;
+      margin-bottom: 72px;
+      img {
+        height:     100%;
+        width:      136px;
+        object-fit: contain;
+      }
     }
     &__way {
       display:         flex;
-      justify-content: space-between;
+      flex-wrap:       wrap;
+      justify-content: space-around;
       align-items:     stretch;
       width:           100%;
       h3 {
@@ -200,34 +206,32 @@ h1, h2 {
         color:       #1b272f;
         font-size:   30px;
         font-weight: 500;
-        line-height: 60px;
+        line-height: 1.2;
         text-align:  left;
-        margin:      0 0 41px 0;
+        margin:      0 0 26px 0;
       }
       p {
+        width:       100%;
         color:       #adadad;
         font-size:   24px;
         font-weight: 300;
-        line-height: 30px;
+        line-height: 1.25;
         text-align:  left;
       }
     }
-    .col-4 {
+    &__wayItem {
       display:         flex;
       flex-direction:  column;
       align-items:     center;
       justify-content: flex-start;
       width:           32%;
-      img {
-        width: 30%;
-      }
     }
   }
   .person {
     position:       relative;
-    margin-top:     -37vw;
-    padding-top:    16vw;
-    padding-bottom: 21vw;
+    margin-top:     -718px;
+    padding-top:    212px;
+    padding-bottom: 310px;
     .container {
       display:         flex;
       flex-direction:  column;
@@ -245,31 +249,27 @@ h1, h2 {
     }
     .photo {
       max-width:     460px;
-      margin-bottom: 79px;
+      margin-bottom: 70px;
     }
     h2 {
-      color:       #ffffff;
-      font-size:   60px;
-      font-weight: 500;
-      line-height: 60px;
-      margin:      0 0 83px 0;
-      text-align:  left;
+      color:      $white;
+      margin:     0 0 62px 0;
+      text-align: left;
     }
     p {
       color:       #adadad;
       font-size:   30px;
       font-weight: 300;
-      line-height: 40px;
+      line-height: 1.33;
     }
   }
   .with-popup {
     margin-bottom: 34px;
     h2 {
       color:       #1b272f;
-      font-size:   60px;
-      font-weight: 500;
-      line-height: 72px;
-      margin:      0 0 106px 0;
+      line-height: 1.2;
+      max-width:   900px;
+      margin:      0 auto 90px auto;
     }
     .popup-wrapper {
       display:         flex;
@@ -286,12 +286,12 @@ h1, h2 {
         box-shadow:       10px 10px 33px 5px rgba(232, 232, 232, 0.68);
         border-radius:    20px;
         background-color: #ffffff;
-        padding:          40px 20px 50px 20px;
+        padding:          34px 18px 50px 18px;
         p {
           color:       #000000;
           font-size:   18px;
           font-weight: 300;
-          line-height: 24px;
+          line-height: 1.33;
           margin:      0 0 45px 0;
         }
         .stars {
@@ -316,335 +316,166 @@ h1, h2 {
 }
 
 
-@media screen and (max-width: 1440px) {
-  .container {
-    width: 80%;
+@media screen and (max-width: 991.98px) {
+  .stars {
+    .star {
+      max-width: 19px;
+    }
   }
   .button {
-    width:     40%;
-    font-size: 20px;
-    padding:   25px 0;
-  }
-  .header {
-    margin-bottom: 40px;
-    h1 {
-      font-size:     50px;
-      line-height:   50px;
-      margin-bottom: 26px;
-    }
-    h2 {
-      font-size:     36px;
-      line-height:   40px;
-      margin-bottom: 30px;
-    }
+    font-size: 26px;
+    padding:   24px 0;
   }
   .main {
-    .person {
-      margin-top:  -30vw;
-      padding-top: 13vw;
-      .photo {
-        width:         20vw;
-        margin-bottom: 20px;
-      }
-      h2 {
-        font-size:     36px;
-        line-height:   1.5;
-        margin-bottom: 20px;
-      }
-      p {
-        font-size:   18px;
-        line-height: 1.5;
-      }
-      .person-back {
-        height: auto;
-      }
+    h2 {
+      font-size: 43px;
     }
     .testimonial {
-      h2 {
-        margin-bottom: 30px;
-        font-size:     36px;
-        text-align:    center;
+      &__comment {
+        p {
+          font-size: 20px;
+        }
       }
       &__name {
-        width: 25%;
+        p {
+          font-size: 18px;
+        }
         h3 {
-          font-size:     24px;
-          line-height:   1.2;
-          margin-bottom: 8px;
-        }
-        p {
-          font-size:     18px;
-          line-height:   1.2;
-          margin-bottom: 8px;
-        }
-        .stars {
-          width: 40%;
-        }
-      }
-      &__comment {
-        width: 75%;
-        p {
-          font-size:   18px;
-          line-height: 1.5;
+          font-size: 26px;
         }
       }
     }
     .call {
-      h2 {
-        font-size:   36px;
-        line-height: 1.5;
-        margin:      0 0 50px;
-      }
+      padding-top:    100px;
+      padding-bottom: 330px;
       .heading {
-        font-size:   18px;
-        line-height: 1.5;
-      }
-      &__image {
-        margin-bottom: 20px;
-        .col-4 {
-          img {
-            width: 20%;
-          }
-        }
+        font-size: 22px;
       }
       &__way {
-        padding: 0 15px;
         h3 {
-          font-size:     20px;
-          line-height:   1.5;
-          margin-bottom: 20px;
+          font-size: 22px;
         }
         p {
-          font-size:   18px;
-          line-height: 1.4;
+          font-size: 18px;
         }
       }
-    }
-    .with-popup {
-      h2 {
-        font-size:     36px;
-        line-height:   1.5;
-        margin-bottom: 40px;
-      }
-      .popup-wrapper {
-        .popup {
-          align-items: flex-start;
-          padding:     20px 15px 25px 15px;
-          p {
-            font-size:     16px;
-            margin-bottom: 20px;
-            line-height:   1.5;
-          }
-          .stars {
-            width:       45%;
-            padding-top: 10px;
-          }
-        }
-      }
-    }
-  }
-  .footer {
-    padding-top: 100px;
-    h2 {
-      font-size:     36px;
-      line-height:   1.5;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size:     18px;
-      line-height:   1.5;
-      margin-bottom: 30px;
-    }
-    .button {
-      margin-bottom: 20px;
-    }
-  }
-}
-
-@media screen and (max-width: 960px) {
-  .button {
-    width: 70%;
-  }
-  .main {
-    .person {
-      padding-top: 5vw;
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-    width: 90%;
-  }
-  .button {
-    font-size:   16px;
-    line-height: 1;
-    padding:     10px;
-    text-align:  center;
-  }
-  .header {
-    margin-bottom: 0;
-    .modern-house {
-      top: -50px;
-    }
-    h1 {
-      font-size:     28px;
-      line-height:   1;
-      margin-bottom: 15px;
-    }
-    h2 {
-      font-size:     24px;
-      line-height:   1;
-      margin-bottom: 10px;
-    }
-  }
-  .main {
-    .testimonial {
-      margin-bottom: 0;
-      h2 {
-        font-size:     24px;
-        line-height:   1;
-        margin-bottom: 15px;
-      }
-      &__recommendation {
-        width:  80%;
-        margin: 0 auto;
-      }
-      &__name {
-        h3 {
-          font-size:   16px;
-          line-height: 1;
-        }
-        p {
-          font-size:   14px;
-          line-height: 1;
-        }
-      }
-      &__comment {
-        p {
-          font-size:   14px;
-          line-height: 1;
-        }
-      }
-    }
-    .call {
-      h2 {
-        font-size:     24px;
-        line-height:   1;
-        margin-bottom: 10px;
-      }
-      .heading {
-        font-size:     14px;
-        line-height:   1.5;
-        margin-bottom: 30px;
-      }
-      .container {
-        display:   flex;
-        flex-wrap: wrap;
+      &__wayItem {
+        width:         48%;
+        margin-bottom: 24px;
       }
       &__image {
-        width:           30%;
-        flex-direction:  row;
-        justify-content: space-between;
-        align-items:     stretch;
-        flex-wrap:       wrap;
-        .col-4 {
-          justify-content: center;
-        }
-      }
-      &__way {
-        width:          70%;
-        flex-direction: column;
-      }
-      .col-4 {
-        width:         100%;
-        margin-bottom: 20px;
-        h3 {
-          font-size:     18px;
-          line-height:   1;
-          margin-bottom: 10px;
-        }
-        p {
-          width:       100%;
-          font-size:   14px;
-          line-height: 1.5;
-        }
+        margin-bottom: 36px;
       }
     }
     .person {
-      padding-top: 10vw;
-      .photo {
-        margin-bottom: 10px;
-      }
-      h2 {
-        font-size:     24px;
-        line-height:   1;
-        margin-bottom: 0;
-      }
       p {
-        font-size:   14px;
-        line-height: 1.5;
+        font-size: 22px;
       }
+      margin-top: -520px;
     }
     .with-popup {
       h2 {
-        font-size:     24px;
-        line-height:   1;
-        margin-bottom: 20px;
+        margin: 0 auto 45px;
       }
       .popup-wrapper {
         .popup {
           width:         100%;
-          margin-bottom: 20px;
-          .stars {
-            width: 15%;
-          }
+          margin-bottom: 32px;
         }
       }
     }
   }
-  .footer {
-    h2 {
-      font-size:     24px;
-      line-height:   1;
-      margin-bottom: 20px;
-    }
-    .button {
-      margin-bottom: 20px;
-    }
-    p {
-      font-size:   14px;
-      line-height: 1.5;
-    }
-  }
 }
 
-@media screen and (max-width: 540px) {
-  .header {
-    .modern-house {
-      top: -35px;
+@media screen and (max-width: 567px) {
+  .stars {
+    .star {
+      max-width: 12px;
     }
   }
+  .button {
+    font-size: 16px;
+  }
   .main {
+    h2 {
+      font-size: 26px;
+    }
     .testimonial {
+      margin-bottom: 39px;
+      h2 {
+        margin: 0 0 43px;
+      }
+      &__comment {
+        padding-left: 0;
+        p {
+          font-size: 14px;
+        }
+      }
       &__recommendation {
+        flex-direction: column;
+        align-items:    flex-start;
+      }
+      &__name {
+        border-right:  none;
+        margin-bottom: 14px;
+        p {
+          font-size: 16px;
+        }
+        h3 {
+          font-size: 18px;
+        }
+      }
+    }
+    .call {
+      h2 {
+        margin-bottom: 32px;
+      }
+      &__way {
+        p {
+          font-size: 16px;
+        }
+        h3 {
+          font-size: 18px;
+          margin:    0 0 14px;
+        }
+      }
+      .heading {
+        font-size: 16px;
+        margin:    0 0 36px 0;
+      }
+      &__image {
+        margin-bottom: 16px;
+        height:        50px;
+        img {
+          width: 70px;
+        }
+      }
+      &__wayItem {
         width: 100%;
       }
     }
     .person {
-      padding-top: 20vw;
-      margin-top:  -47vw;
-      .person-back {
-        height: 100%;
+      padding-bottom: 210px;
+      .photo {
+        max-width: 260px;
+      }
+      p {
+        font-size: 16px;
+      }
+      h2 {
+        margin: 0 0 30px;
       }
     }
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .main {
-    .person {
-      margin-top: -57vw;
+    .with-popup {
+      .popup-wrapper {
+        .popup {
+          padding: 18px 9px 25px;
+          p {
+            font-size: 16px;
+            margin:    0 0 24px;
+          }
+        }
+      }
     }
   }
 }
