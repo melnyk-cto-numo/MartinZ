@@ -12,8 +12,8 @@
 }
 
 .cross {
-text-decoration: line-through;
-  font-weight: 500;
+  text-decoration: line-through;
+  font-weight:     500;
 }
 
 .progress {
@@ -64,7 +64,7 @@ text-decoration: line-through;
   padding:          2rem 1rem;
   h2 {
     font-size:     3.125rem;
-    line-height:   0.92;
+    line-height:   1.02;
     font-weight:   500;
     margin-bottom: 1rem;
   }
@@ -378,6 +378,12 @@ text-decoration: line-through;
 
 @media screen and (max-width: 768px) {
   html {
-    font-size: 8px;
+    font-size: 11px;
+  }
+  .steps button, .steps label input, .steps label input::placeholder {
+    font-size: 1.5rem;
+  }
+  .steps-inner {
+    padding: 2rem 0;
   }
 }
