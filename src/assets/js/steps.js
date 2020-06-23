@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const item = document.getElementsByClassName('steps-inner');
     const radioTitle = document.getElementsByClassName('radioTitle');
     const back = document.getElementById('back');
-    let numberPage = 7;
+    let numberPage = 0;
 
     // Progress Bar
     percent.style.transform = `translateX(${-(100 - (numberPage + 1) / (item.length + 1) * 100)}%)`;
@@ -101,7 +101,6 @@ document.addEventListener('DOMContentLoaded', function () {
             error[3].innerHTML = 'The field cannot be empty';
         } else {
             error[3].innerHTML = '';
-            // alert("Done");
         }
     });
 
