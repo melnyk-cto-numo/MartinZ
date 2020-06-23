@@ -8,6 +8,8 @@
   justify-content: center;
   align-items:     center;
   flex-direction:  column;
+  display:         -webkit-inline-box;
+  text-align:      center;
   .container {
     display:         flex;
     flex-direction:  column;
@@ -24,8 +26,8 @@
     left:            0;
   }
   .modern-house {
-    width:    61.5%;
-    margin:   -8.8% auto 46px;
+    width:    100%;
+    margin:   -14.6% auto 46px;
     position: relative;
     z-index:  2;
   }

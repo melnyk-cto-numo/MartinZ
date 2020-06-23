@@ -85,6 +85,18 @@ h1, h2 {
   padding:          36px 0;
 }
 
+.more {
+  color:  #7185ff;
+  cursor: pointer;
+  &:hover, &:active {
+    opacity: .7;
+  }
+}
+
+#moreText {
+  display: none;
+}
+
 .stars {
   width:           100%;
   display:         flex;
@@ -160,7 +172,7 @@ h1, h2 {
     display:        flex;
     width:          100%;
     padding-top:    200px;
-    padding-bottom: 530px;
+    padding-bottom: 500px;
     position:       relative;
     margin-bottom:  0;
     .back-call {
@@ -229,8 +241,8 @@ h1, h2 {
   }
   .person {
     position:       relative;
-    margin-top:     -718px;
-    padding-top:    212px;
+    padding-top:    26px;
+    margin-top:     -500px;
     padding-bottom: 310px;
     .container {
       display:         flex;
@@ -240,7 +252,7 @@ h1, h2 {
     }
     .person-back {
       position:        absolute;
-      object-fit:      cover;
+      object-fit:      fill;
       object-position: top;
       height:          100%;
       left:            0;
@@ -346,8 +358,7 @@ h1, h2 {
       }
     }
     .call {
-      padding-top:    100px;
-      padding-bottom: 330px;
+      padding-top: 100px;
       .heading {
         font-size: 22px;
       }
@@ -368,6 +379,9 @@ h1, h2 {
       }
     }
     .person {
+      .person-back {
+        object-fit: cover;
+      }
       p {
         font-size: 22px;
       }
