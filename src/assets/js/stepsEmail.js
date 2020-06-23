@@ -5,7 +5,6 @@ $("#step9Button").on('click', function () {
     const homeConditionRate = $("[name='Home condition rate']:checked").val();
     const neighborhoodRate = $("[name='Neighborhood rate']:checked").val();
     const streetAddress = $("[name='Street Address']").val();
-    const location = $("[name='Location']").val();
     const unitNumber = $("[name='Unit number']").val();
     const sell = $("[name='Sell']:checked").val();
     const name = $("[name='Name']").val();
@@ -23,7 +22,6 @@ $("#step9Button").on('click', function () {
             'homeConditionRate': homeConditionRate,
             'neighborhoodRate': neighborhoodRate,
             'streetAddress': streetAddress,
-            'location': location,
             'unitNumber': unitNumber,
             'sell': sell,
             'name': name,

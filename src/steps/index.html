@@ -33,7 +33,7 @@
                 <button id='step1Button' type='button'>GET MY HOME VALUE</button>
             </div>
             <div class='notice-form'>
-                <h5>Get your home value in your inbox in seconds.</h5>
+                <h5>Get your home value in your inbox in <span class='cross'>seconds</span>.</h5>
                 <p>( sorry, but let's be honest it takes a bit longer than that )</p>
             </div>
         </div>
@@ -193,9 +193,6 @@
                     <input name="Street Address" id='streetAddress' type='text' placeholder='Enter Your Street Address'>
                 </label>
                 <label>
-                    <input name="Location" id='location' type='text' placeholder='Enter a location'>
-                </label>
-                <label>
                     <input name="Unit number" id='unitNumber' type='number' placeholder='Enter Unit number'>
                 </label>
                 <button id='step6Button' type='button'>NEXT</button>
@@ -268,8 +265,8 @@
             </div>
             <div class='notice-form'>
                 <h5>
-                    This is a kdetailed report that takes time to prepare for you. You have our guarantee it will be
-                    delivered in the next 24 hours.
+                    This is a kdetailed report that takes time to prepare for you. <br/>
+                    You have our guarantee it will be delivered in the next 24 hours.
                 </h5>
             </div>
         </div>
@@ -279,8 +276,11 @@
     <button id='back' class='btn-back'>Back</button>
 </main>
 
-<script src='../assets/js/steps.js'></script>
 <script src='../assets/js/vendors/jquery.js'></script>
+<!-- Google Maps JavaScript Library -->
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVXisMcN2lHYrm_l-lp7V52RG-IBBQxZ0&libraries=places"></script>
+<script src='../assets/js/steps.js'></script>
 <script src='../assets/js/stepsEmail.js'></script>
 </body>
 </html>

@@ -11,6 +11,11 @@
   }
 }
 
+.cross {
+text-decoration: line-through;
+  font-weight: 500;
+}
+
 .progress {
   width:       100%;
   max-width:   40rem;
@@ -36,7 +41,7 @@
     height:           100%;
     background-color: $mainColor;
     border-radius:    0.625rem 0 0 0.625rem;
-    transform:        translateX(0%);
+    transform:        translateX(-100%);
   }
 }
 
@@ -75,7 +80,7 @@
   }
   h5 {
     font-size:   1.375rem;
-    line-height: 1.09;
+    line-height: 1.2;
     font-weight: 700;
   }
   p {
@@ -243,7 +248,7 @@
     flex-direction:  column;
   }
   &-title {
-    margin-bottom: 12.75rem;
+    margin-bottom: 5.75rem;
     img {
       width:         3.75rem;
       margin-bottom: 1.5rem;

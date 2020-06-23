@@ -9,6 +9,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Progress Bar
     percent.style.transform = `translateX(${-(100 - (numberPage + 1) / (item.length + 1) * 100)}%)`;
 
+    // Hide "Back" button
+    const hideBackBtn = () => {
+        if (numberPage === 0) {
+            back.style.display = 'none';
+        } else {
+            back.style.display = 'block'
+        }
+    };
+    hideBackBtn();
+
     // Step Switching Logic
     const nextStep = (operator) => {
         if (operator === '++') {
@@ -23,7 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 item[i].classList.add('d-none');
             }
             item[numberPage].classList.remove('d-none');
-        }, 100);
+        }, 50);
+
+        hideBackBtn();
     };
 
     // Click on "Back" button
@@ -65,16 +77,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Click on on "Step 6" button
     const step6Button = document.getElementById('step6Button');
     const streetAddress = document.getElementById('streetAddress');
-    const location = document.getElementById('location');
-    const unitNumber = document.getElementById('unitNumber');
+
+    // Autocomplete Field with Google Maps
+    let autocomplete;
+    autocomplete = new google.maps.places.Autocomplete((streetAddress), {types: ['geocode']});
+
     step6Button.addEventListener('click', function () {
         if (streetAddress.value === '') {
             error[1].innerHTML = 'The Your Street Address cannot be empty';
-        } else if (location.value === '') {
-            error[1].innerHTML = 'The location cannot be empty';
-
-        } else if (unitNumber.value === '') {
-            error[1].innerHTML = 'The Unit number cannot be empty';
         } else {
             error[1].innerHTML = '';
             nextStep('++');
