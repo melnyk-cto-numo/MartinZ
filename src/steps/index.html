@@ -16,267 +16,271 @@
             <span id='percent'></span>
         </div>
     </div>
-
-    <!--  BEGIN STEP 1  -->
     <img class='background' src='../assets/images/steps/background.jpg' alt=''>
-    <div id='step-1' class='steps-inner'>
-        <div class='steps-title'>
-            <img src='../assets/images/steps/house.png' alt='house'>
-            <h2>What’s the Real Value of My Home?</h2>
-            <h5>Get Guidance From This Short Quiz</h5>
+    <form id="stepsForm" action="">
+        <!--  BEGIN STEP 1  -->
+        <div id='step-1' class='steps-inner'>
+            <div class='steps-title'>
+                <img src='../assets/images/steps/house.png' alt='house'>
+                <h2>What’s the Real Value of My Home?</h2>
+                <h5>Get Guidance From This Short Quiz</h5>
+            </div>
+            <div class='steps-form'>
+                <label class='email'>
+                    <span class='error-message'></span>
+                    <input name="Email address" id='email' type='email' placeholder='Enter your email address.'>
+                </label>
+                <button id='step1Button' type='button'>GET MY HOME VALUE</button>
+            </div>
+            <div class='notice'>
+                <h5>Get your home value in your inbox in seconds.</h5>
+                <p>( sorry, but let's be honest it takes a bit longer than that )</p>
+            </div>
         </div>
-        <form class='steps-form'>
-            <label class='email'>
-                <span class='error-message'></span>
-                <input id='email' type='email' placeholder='Enter your email address.'>
-            </label>
-            <button id='step1Button' type='button'>GET MY HOME VALUE</button>
-        </form>
-        <div class='notice'>
-            <h5>Get your home value in your inbox in seconds.</h5>
-            <p>( sorry, but let's be honest it takes a bit longer than that )</p>
-        </div>
-    </div>
-    <!--  END STEP 1  -->
+        <!--  END STEP 1  -->
 
-    <!--  BEGIN STEP 2  -->
-    <div id='step-2' class='steps-inner d-none'>
-        <div class='steps-title'>
-            <img src='../assets/images/steps/property.png' alt='house'>
-            <h2>What kind of property do you own?</h2>
-        </div>
-        <form class='steps-form'>
-            <label class='radio'>
-                <input type='radio' name='What kind of property do you own?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>Detached Home</span>
+        <!--  BEGIN STEP 2  -->
+        <div id='step-2' class='steps-inner d-none'>
+            <div class='steps-title'>
+                <img src='../assets/images/steps/property.png' alt='house'>
+                <h2>What kind of property do you own?</h2>
+            </div>
+            <div class='steps-form'>
+                <label class='radio'>
+                    <input type='radio' name='What kind of property do you own?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Detached Home</span>
 
-            </label>
-            <label class='radio'>
-                <input type='radio' name='What kind of property do you own?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>Semi-Detached Home</span>
-            </label>
-            <label class='radio'>
-                <input type='radio' name='What kind of property do you own?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>Freehold Townhouse</span>
-            </label>
-            <label class='radio'>
-                <input type='radio' name='What kind of property do you own?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>Condo-Townhouse</span>
-            </label>
-            <label class='radio'>
-                <input type='radio' name='What kind of property do you own?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>Condo Apartment</span>
-            </label>
-            <label class='radio'>
-                <input type='radio' name='What kind of property do you own?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>Other</span>
-            </label>
-        </form>
-    </div>
-    <!--  END STEP 2  -->
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='What kind of property do you own?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Semi-Detached Home</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='What kind of property do you own?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Freehold Townhouse</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='What kind of property do you own?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Condo-Townhouse</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='What kind of property do you own?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Condo Apartment</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='What kind of property do you own?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Other</span>
+                </label>
+            </div>
+        </div>
+        <!--  END STEP 2  -->
 
-    <!--  BEGIN STEP 3  -->
-    <div id='step-3' class='steps-inner d-none'>
-        <div class='steps-title'>
-            <img src='../assets/images/steps/build.png' alt='build'>
-            <h2>How long have you lived in your property?</h2>
+        <!--  BEGIN STEP 3  -->
+        <div id='step-3' class='steps-inner d-none'>
+            <div class='steps-title'>
+                <img src='../assets/images/steps/build.png' alt='build'>
+                <h2>How long have you lived in your property?</h2>
+            </div>
+            <div class='steps-form'>
+                <label class='radio'>
+                    <input type='radio' name='How long have you lived in your property?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>>1 Year</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='How long have you lived in your property?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>1-5</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='How long have you lived in your property?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>6-10</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='How long have you lived in your property?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>11-15</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='How long have you lived in your property?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>15+</span>
+                </label>
+            </div>
         </div>
-        <form class='steps-form'>
-            <label class='radio'>
-                <input type='radio' name='How long have you lived in your property?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>>1 Year</span>
-            </label>
-            <label class='radio'>
-                <input type='radio' name='How long have you lived in your property?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>1-5</span>
-            </label>
-            <label class='radio'>
-                <input type='radio' name='How long have you lived in your property?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>6-10</span>
-            </label>
-            <label class='radio'>
-                <input type='radio' name='How long have you lived in your property?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>11-15</span>
-            </label>
-            <label class='radio'>
-                <input type='radio' name='How long have you lived in your property?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>15+</span>
-            </label>
-        </form>
-    </div>
-    <!--  END STEP 3  -->
+        <!--  END STEP 3  -->
 
-    <!--  BEGIN STEP 4  -->
-    <div id='step-4' class='steps-inner d-none'>
-        <div class='steps-title'>
-            <img src='../assets/images/steps/build.png' alt='build'>
-            <h2>How would you rate the condition of your home?</h2>
-            <h5>(Roof, foundations, insulation, appliances, HVAC, etc)</h5>
+        <!--  BEGIN STEP 4  -->
+        <div id='step-4' class='steps-inner d-none'>
+            <div class='steps-title'>
+                <img src='../assets/images/steps/build.png' alt='build'>
+                <h2>How would you rate the condition of your home?</h2>
+                <h5>(Roof, foundations, insulation, appliances, HVAC, etc)</h5>
+            </div>
+            <div class='steps-form'>
+                <label class='radio'>
+                    <input type='radio' name='How would you rate the condition of your home?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Poor</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='How would you rate the condition of your home?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Good</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='How would you rate the condition of your home?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Great</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='How would you rate the condition of your home?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Excellent</span>
+                </label>
+            </div>
         </div>
-        <form class='steps-form'>
-            <label class='radio'>
-                <input type='radio' name='How would you rate the condition of your home?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>Poor</span>
-            </label>
-            <label class='radio'>
-                <input type='radio' name='How would you rate the condition of your home?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>Good</span>
-            </label>
-            <label class='radio'>
-                <input type='radio' name='How would you rate the condition of your home?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>Great</span>
-            </label>
-            <label class='radio'>
-                <input type='radio' name='How would you rate the condition of your home?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>Excellent</span>
-            </label>
-        </form>
-    </div>
-    <!--  END STEP 4  -->
+        <!--  END STEP 4  -->
 
-    <!--  BEGIN STEP 5  -->
-    <div id='step-5' class='steps-inner d-none'>
-        <div class='steps-title'>
-            <img src='../assets/images/steps/double-home.png' alt='build'>
-            <h2>How would you rate your neighborhood?</h2>
-            <h5>(Convenient to school, shopping, entertainment, parks)</h5>
+        <!--  BEGIN STEP 5  -->
+        <div id='step-5' class='steps-inner d-none'>
+            <div class='steps-title'>
+                <img src='../assets/images/steps/double-home.png' alt='build'>
+                <h2>How would you rate your neighborhood?</h2>
+                <h5>(Convenient to school, shopping, entertainment, parks)</h5>
+            </div>
+            <div class='steps-form'>
+                <label class='radio'>
+                    <input type='radio' name='How would you rate your neighborhood?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Poor</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='How would you rate your neighborhood?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Good</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='How would you rate your neighborhood?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Great</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='How would you rate your neighborhood?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Excellent</span>
+                </label>
+            </div>
         </div>
-        <form class='steps-form'>
-            <label class='radio'>
-                <input type='radio' name='How would you rate your neighborhood?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>Poor</span>
-            </label>
-            <label class='radio'>
-                <input type='radio' name='How would you rate your neighborhood?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>Good</span>
-            </label>
-            <label class='radio'>
-                <input type='radio' name='How would you rate your neighborhood?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>Great</span>
-            </label>
-            <label class='radio'>
-                <input type='radio' name='How would you rate your neighborhood?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>Excellent</span>
-            </label>
-        </form>
-    </div>
-    <!--  END STEP 5  -->
+        <!--  END STEP 5  -->
 
-    <!--  BEGIN STEP 6  -->
-    <div id='step-6' class='steps-inner d-none'>
-        <div class='steps-title'>
-            <img src='../assets/images/steps/cost-home.png' alt='cost-home'>
-            <h2>Now Let’s Analyze The True Value of Your Property.</h2>
+        <!--  BEGIN STEP 6  -->
+        <div id='step-6' class='steps-inner d-none'>
+            <div class='steps-title'>
+                <img src='../assets/images/steps/cost-home.png' alt='cost-home'>
+                <h2>Now Let’s Analyze The True Value of Your Property.</h2>
+            </div>
+            <div class='steps-form'>
+                <label>
+                    <span class='error-message'></span>
+                    <input id='streetAddress' type='text' placeholder='Enter Your Street Address'>
+                </label>
+                <label>
+                    <input id='location' type='text' placeholder='Enter a location'>
+                </label>
+                <label>
+                    <input id='unitNumber' type='number' placeholder='Enter Unit number'>
+                </label>
+                <button id='step6Button' type='button'>NEXT</button>
+            </div>
         </div>
-        <form class='steps-form'>
-            <label>
-                <span class='error-message'></span>
-                <input id='streetAddress' type='text' placeholder='Enter Your Street Address'>
-            </label>
-            <label>
-                <input id='location' type='text' placeholder='Enter a location'>
-            </label>
-            <label>
-                <input id='unitNumber' type='number' placeholder='Enter Unit number'>
-            </label>
-            <button id='step6Button' type='button'>NEXT</button>
-        </form>
-    </div>
-    <!--  END STEP 6  -->
+        <!--  END STEP 6  -->
 
-    <!--  BEGIN STEP 7  -->
-    <div id='step-7' class='steps-inner d-none'>
-        <div class='steps-title'>
-            <img src='../assets/images/steps/sell.png' alt='sell'>
-            <h2>When are you looking to sell your home?</h2>
+        <!--  BEGIN STEP 7  -->
+        <div id='step-7' class='steps-inner d-none'>
+            <div class='steps-title'>
+                <img src='../assets/images/steps/sell.png' alt='sell'>
+                <h2>When are you looking to sell your home?</h2>
+            </div>
+            <div class='steps-form'>
+                <label class='radio'>
+                    <input type='radio' name='When are you looking to sell your home?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>0-3 Months</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='When are you looking to sell your home?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>3-6 Months</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='When are you looking to sell your home?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>6-12 Months</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='When are you looking to sell your home?'>
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Not Sure</span>
+                </label>
+            </div>
         </div>
-        <form class='steps-form'>
-            <label class='radio'>
-                <input type='radio' name='When are you looking to sell your home?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>0-3 Months</span>
-            </label>
-            <label class='radio'>
-                <input type='radio' name='When are you looking to sell your home?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>3-6 Months</span>
-            </label>
-            <label class='radio'>
-                <input type='radio' name='When are you looking to sell your home?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>6-12 Months</span>
-            </label>
-            <label class='radio'>
-                <input type='radio' name='When are you looking to sell your home?'>
-                <span class='radio-icon'></span>
-                <span class='radioTitle'>Not Sure</span>
-            </label>
-        </form>
-    </div>
-    <!--  END STEP 7  -->
+        <!--  END STEP 7  -->
 
-    <!--  BEGIN STEP 8  -->
-    <div id='step-8' class='steps-inner d-none'>
-        <div class='steps-title'>
-            <img src='../assets/images/steps/people.png' alt='people'>
-            <h2>What’s Your Name?</h2>
+        <!--  BEGIN STEP 8  -->
+        <div id='step-8' class='steps-inner d-none'>
+            <div class='steps-title'>
+                <img src='../assets/images/steps/people.png' alt='people'>
+                <h2>What’s Your Name?</h2>
+            </div>
+            <div class='steps-form'>
+                <label>
+                    <span class='error-message'></span>
+                    <input id='name' type='text' placeholder='Enter Your Name'>
+                </label>
+                <button id='step8Button' type='button'>NEXT</button>
+            </div>
         </div>
-        <form class='steps-form'>
-            <label>
-                <span class='error-message'></span>
-                <input id='name' type='text' placeholder='Enter Your Name'>
-            </label>
-            <button id='step8Button' type='button'>NEXT</button>
-        </form>
-    </div>
-    <!--  END STEP 8  -->
+        <!--  END STEP 8  -->
 
-    <!--  BEGIN STEP 9  -->
-    <div id='step-9' class='steps-inner d-none'>
-        <div class='steps-title'>
-            <img src='../assets/images/steps/step-9.png' alt=''>
-            <h2>Ready For Your Results?</h2>
-            <h3 class='border-bottom'>Enter Your Mobile Number to Receive a Text Message When Your Report is Ready!</h3>
-            <h3>Your information is private and secure.</h3>
+        <!--  BEGIN STEP 9  -->
+        <div id='step-9' class='steps-inner d-none'>
+            <div class='steps-title'>
+                <img src='../assets/images/steps/step-9.png' alt=''>
+                <h2>Ready For Your Results?</h2>
+                <h3 class='border-bottom'>Enter Your Mobile Number to Receive a Text Message When Your Report is
+                    Ready!</h3>
+                <h3>Your information is private and secure.</h3>
+            </div>
+            <div class='steps-form'>
+                <label>
+                    <span class='error-message'></span>
+                    <input id='yourMobile' type='tel' placeholder='Enter Your Mobile Number'>
+                </label>
+                <button id='step9Button' type='button'>GET THE TRUE VALUE OF MY HOME</button>
+            </div>
+            <div class='notice'>
+                <h5>
+                    This is a kdetailed report that takes time to prepare for you. You have our guarantee it will be
+                    delivered in the next 24 hours.
+                </h5>
+            </div>
         </div>
-        <form class='steps-form'>
-            <label>
-                <span class='error-message'></span>
-                <input id='yourMobile' type='tel' placeholder='Enter Your Mobile Number'>
-            </label>
-            <button id='step9Button' type='button'>GET THE TRUE VALUE OF MY HOME</button>
-        </form>
-        <div class='notice'>
-            <h5>
-                This is a kdetailed report that takes time to prepare for you. You have our guarantee it will be
-                delivered in the next 24 hours.
-            </h5>
-        </div>
-    </div>
-    <!--  END STEP 9  -->
+        <!--  END STEP 9  -->
+    </form>
 
     <button id='back' class='btn-back'>Back</button>
 </main>
 
 <script src='../assets/js/steps.js'></script>
+<script src='../assets/js/vendors/jquery.js'></script>
+<script src='../assets/js/stepsEmail.js'></script>
 </body>
 </html>
