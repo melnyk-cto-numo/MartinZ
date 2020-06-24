@@ -39,7 +39,7 @@ $("#step9Button").on('click', function () {
                 // clear form fields
                 $("#stepsForm").trigger("reset");
 
-                window.location.href = "/";
+                window.location.href = "/thankyou";
                 console.log('Your request has been sent');
 
             }

@@ -1,203 +1,321 @@
 <!doctype html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    <meta charset='UTF-8'>
+    <meta name='viewport'
+          content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <meta name="theme-color" content="#e4a11b">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
     <title>True Home Values</title>
     <!-- Start Of Social Graph Protocol Meta Data -->
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:url" content="http://truehomevalues.ca/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="True Home Values" />
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:url" content="http://truehomevalues.ca/steps/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="True Home Values"/>
     <!-- End Of Social Graph Protocol Meta Data -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+    <link rel='stylesheet' href='assets/css/main.css'>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '662501690998293');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=662501690998293&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
 </head>
 <body>
-<div class='notice'>
-    <div class='container'>
-        <div class='notice__inner'>
-            <h2>Thank you!</h2>
-            <p>Your report is being prepared, and will be sent to you within 24 hours. But first, see below</p>
-            <a href='#content' class='link'>
-                <img src="./assets/images/arrow.svg" alt="">
-            </a>
+<main class='steps'>
+    <div class='progress'>
+        <div> Your progress</div>
+        <div class='progress-bar'>
+            <span id='percent'></span>
         </div>
     </div>
-</div>
-<header class="header" id='content'>
-    <img src='./assets/images/top-back.png' alt='background' class='top-back'>
-    <img src='./assets/images/modern-house.png' alt='modern-house' class='modern-house'>
-    <div class='container'>
-        <h1>
-            Don’t want to wait for your
-            <br>
-            <span class='text'>Home Value Analysis</span><span class='question'>?</span>
-        </h1>
-        <h2>Ready to Sell and Talk With Us?</h2>
-        <a href='steps/' class='button'>Book Your Free Strategy Call</a>
-    </div>
-</header>
-<main class="main">
-    <section class='testimonial'>
-        <div class='container'>
-            <h2>Testimonial</h2>
-            <div class='testimonial__recommendation'>
-                <div class='testimonial__name'>
-                    <h3>Jane Doe</h3>
-                    <p>Journalist</p>
-                    <div class='stars'>
-                        <img src='./assets/images/star.png' alt='star' class='star'>
-                        <img src='./assets/images/star.png' alt='star' class='star'>
-                        <img src='./assets/images/star.png' alt='star' class='star'>
-                        <img src='./assets/images/star.png' alt='star' class='star'>
-                        <img src='./assets/images/star.png' alt='star' class='star'>
-                    </div>
-                </div>
-                <div class='testimonial__comment'>
-                    <p>
-                        We can’t say enough about Martin. Not only was he extremely knowledgeable, he went above and
-                        beyond with marketing our home which resulted in multiple offers and a seamless closing. We
-                        can’t thank him enough.
-                    </p>
-                </div>
+    <img class='background' src='assets/images/steps/background.jpeg' alt=''>
+    <form id="stepsForm" action="">
+        <!--  BEGIN STEP 1  -->
+        <div id='step-1' class='steps-inner'>
+            <div class='steps-title'>
+                <img src='assets/images/steps/step-1.svg' alt='house'>
+                <h2>What’s the Real Value of My Home?</h2>
+                <h5>Get Guidance From This Short Quiz</h5>
+            </div>
+            <div class='steps-form'>
+                <label class='email'>
+                    <span class='error-message'></span>
+                    <input name="Email address" id='email' type='email' placeholder='Enter your email address.'>
+                </label>
+                <button id='step1Button' type='button'>GET MY HOME VALUE</button>
+            </div>
+            <div class='notice-form'>
+                <h5>Get your home value in your inbox in <span class='cross'>seconds</span>.</h5>
+                <p>( sorry, but let's be honest it takes a bit longer than that )</p>
             </div>
         </div>
-    </section>
-    <section class='call'>
-        <img src='./assets/images/back-to-call.png' alt='back-to-call' class='back-call'>
-        <div class='container'>
-            <h2>What You’ll Get During This FREE Strategy Call? </h2>
-            <p class='heading'>
-                This is a 25 minute, one-on-one call to talk about your home. You have our complete attention! <br />
-                You’ll have a chance to talk to a real estate and marketing professional who has worked with hundreds of
-                buyers and sellers and successfully assisted with their real estate needs.
-            </p>
-            <div class='call__way'>
-                <div class='call__wayItem'>
-                    <div class="call__image">
-                        <img src='./assets/images/tube-call.png' alt='call-tube'>
-                    </div>
-                    <h3>What You’ll Do Before the Call</h3>
-                    <p>
-                        Set aside 25 minutes of uninterrupted, focused time.
-                    </p>
-                </div>
-                <div class='call__wayItem'>
-                    <div class="call__image">
-                        <img src='./assets/images/massage.png' alt='massage'>
-                    </div>
-                    <h3>What Happens During the Call</h3>
-                    <p>
-                        We will define what you are trying to accomplish with the sale of your property.
-                        <span id="moreText">
-                            Brainstorming of ideas for ways to increase the visibility of your listing with customer and agents
-                            This call is customized to fit your needs. It is not cookie cutter or formulaic. It is about helping YOU.
-                        </span>
-                        <span id="more" class="more">More...</span>
-                    </p>
-                </div>
-                <div class='call__wayItem'>
-                    <div class="call__image">
-                        <img src='./assets/images/tube.png' alt='tube'>
-                    </div>
-                    <h3>What Changes After the Call</h3>
-                    <p>
-                        During this strategy call you’ll uncover who your ideal buyer needs to be and you’ll walk away
-                        with actionable steps to increase the value of your home and to sell your property above market
-                        value.
-                    </p>
-                </div>
+        <!--  END STEP 1  -->
+
+        <!--  BEGIN STEP 2  -->
+        <div id='step-2' class='steps-inner d-none'>
+            <div class='steps-title'>
+                <img src='assets/images/steps/step-2.svg' alt='house'>
+                <h2>What kind of property do you own?</h2>
+            </div>
+            <div class='steps-form'>
+                <label class='radio'>
+                    <input type='radio' name='Kind of property' value="Detached Home">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Detached Home</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='Kind of property' value="Semi-Detached Home">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Semi-Detached Home</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='Kind of property' value="Freehold Townhouse">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Freehold Townhouse</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='Kind of property' value="Condo-Townhouse">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Condo-Townhouse</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='Kind of property' value="Condo Apartment">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Condo Apartment</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='Kind of property' value="Other">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Other</span>
+                </label>
             </div>
         </div>
-    </section>
-    <section class='person'>
-        <img src='./assets/images/person-back.png' alt='person-back' class='person-back'>
-        <div class='container'>
-            <img src='./assets/images/photo-person.png' alt='photo' class='photo'>
-            <h2>About Martin Zielinski</h2>
-            <p>
-                Award winning realtor and one of the most sought after Property Investment Advisors and Relocation
-                Experts in the Greater Toronto area. Martin and his team goes above and beyond to ensure 100% client
-                satisfaction. His passion and enthusiasm for finding the perfect solution for his clients needs makes
-                him stand out in the industry.
-            </p>
-        </div>
-    </section>
-    <section class='with-popup'>
-        <div class='container'>
-            <h2>
-                Why They Recommend Having a Free Consultation Call
-            </h2>
-            <div class='popup-wrapper'>
-                <div class='popup'>
-                    <p>
-                        Martin took his time with us and listened carefully to our needs. He actually convinced us not
-                        to
-                        sell, but instead refinance our home based on our circumstances.
-                    </p>
-                    <div class='stars'>
-                        <img src='./assets/images/star.png' alt='star' class='star'>
-                        <img src='./assets/images/star.png' alt='star' class='star'>
-                        <img src='./assets/images/star.png' alt='star' class='star'>
-                        <img src='./assets/images/star.png' alt='star' class='star'>
-                        <img src='./assets/images/star.png' alt='star' class='star'>
-                    </div>
-                </div>
-                <div class='popup'>
-                    <p>
-                        After 34 years of my wife and I being in the same home, selling was a very difficult decision -
-                        and
-                        finding the right agent to sell our home was even more difficult. Martin was very considerate of
-                        our
-                        situation, he listened to our needs and executed a plan that surpassed both our expectations.
-                        After
-                        6 days on the market and three offers on the table, Martin sold our home above asking.
-                    </p>
-                    <div class='stars'>
-                        <img src='./assets/images/star.png' alt='star' class='star'>
-                        <img src='./assets/images/star.png' alt='star' class='star'>
-                        <img src='./assets/images/star.png' alt='star' class='star'>
-                        <img src='./assets/images/star.png' alt='star' class='star'>
-                        <img src='./assets/images/star.png' alt='star' class='star'>
-                    </div>
-                </div>
-                <div class='popup'>
-                    <p>
-                        It was a pleasure to work with Martin on the sale of my property. I appreciated his
-                        professionalism
-                        and the valuable advice that he provided throughout the sale process. In the end, Martin was
-                        able to
-                        bring me two offers within one week of listing, and my property sold for over the asking price.
-                        Well
-                        done!
-                    </p>
-                    <div class='stars'>
-                        <img src='./assets/images/star.png' alt='star' class='star'>
-                        <img src='./assets/images/star.png' alt='star' class='star'>
-                        <img src='./assets/images/star.png' alt='star' class='star'>
-                        <img src='./assets/images/star.png' alt='star' class='star'>
-                        <img src='./assets/images/star.png' alt='star' class='star'>
-                    </div>
-                </div>
+        <!--  END STEP 2  -->
+
+        <!--  BEGIN STEP 3  -->
+        <div id='step-3' class='steps-inner d-none'>
+            <div class='steps-title'>
+                <img src='assets/images/steps/step-3.svg' alt='build'>
+                <h2>How long have you lived in your property?</h2>
+            </div>
+            <div class='steps-form'>
+                <label class='radio'>
+                    <input type='radio' name='Length of stay' value=">1 Year">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>>1 Year</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='Length of stay' value="1-5">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>1-5</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='Length of stay' value="6-10">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>6-10</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='Length of stay' value="11-15">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>11-15</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='Length of stay' value="15+">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>15+</span>
+                </label>
             </div>
         </div>
-    </section>
+        <!--  END STEP 3  -->
+
+        <!--  BEGIN STEP 4  -->
+        <div id='step-4' class='steps-inner d-none'>
+            <div class='steps-title'>
+                <img src='assets/images/steps/step-4.svg' alt='build'>
+                <h2>How would you rate the condition of your home?</h2>
+                <h5>(Roof, foundations, insulation, appliances, HVAC, etc)</h5>
+            </div>
+            <div class='steps-form'>
+                <label class='radio'>
+                    <input type='radio' name='Home condition rate' value="Poor">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Poor</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='Home condition rate' value="Good">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Good</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='Home condition rate' value="Great">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Great</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='Home condition rate' value="Excellent">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Excellent</span>
+                </label>
+            </div>
+        </div>
+        <!--  END STEP 4  -->
+
+        <!--  BEGIN STEP 5  -->
+        <div id='step-5' class='steps-inner d-none'>
+            <div class='steps-title'>
+                <img src='assets/images/steps/step-5.svg' alt='build'>
+                <h2>How would you rate your neighborhood?</h2>
+                <h5>(Convenient to school, shopping, entertainment, parks)</h5>
+            </div>
+            <div class='steps-form'>
+                <label class='radio'>
+                    <input type='radio' name='Neighborhood rate' value="Poor">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Poor</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='Neighborhood rate' value="Good">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Good</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='Neighborhood rate' value="Great">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Great</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='Neighborhood rate' value="Excellent">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Excellent</span>
+                </label>
+            </div>
+        </div>
+        <!--  END STEP 5  -->
+
+        <!--  BEGIN STEP 6  -->
+        <div id='step-6' class='steps-inner d-none'>
+            <div class='steps-title'>
+                <img src='assets/images/steps/step-6.svg' alt='cost-home'>
+                <h2>Now Let’s Analyze The True Value of Your Property.</h2>
+            </div>
+            <div class='steps-form'>
+                <label>
+                    <span class='error-message'></span>
+                    <input name="Street Address" id='streetAddress' type='text' placeholder='Enter Your Street Address'>
+                </label>
+                <label>
+                    <input name="Unit number" id='unitNumber' type='number' placeholder='Enter Unit number'>
+                </label>
+                <button id='step6Button' type='button'>NEXT</button>
+            </div>
+        </div>
+        <!--  END STEP 6  -->
+
+        <!--  BEGIN STEP 7  -->
+        <div id='step-7' class='steps-inner d-none'>
+            <div class='steps-title'>
+                <img src='assets/images/steps/step-7.svg' alt='sell'>
+                <h2>When are you looking to sell your home?</h2>
+            </div>
+            <div class='steps-form'>
+                <label class='radio'>
+                    <input type='radio' name='Sell' value="0-3 Months">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>0-3 Months</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='Sell' value="3-6 Months">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>3-6 Months</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='Sell' value="6-12 Months">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>6-12 Months</span>
+                </label>
+                <label class='radio'>
+                    <input type='radio' name='Sell' value="Not Sure">
+                    <span class='radio-icon'></span>
+                    <span class='radioTitle'>Not Sure</span>
+                </label>
+            </div>
+        </div>
+        <!--  END STEP 7  -->
+
+        <!--  BEGIN STEP 8  -->
+        <div id='step-8' class='steps-inner d-none'>
+            <div class='steps-title'>
+                <img src='assets/images/steps/step-8.svg' alt='people'>
+                <h2>What’s Your Name?</h2>
+            </div>
+            <div class='steps-form'>
+                <label>
+                    <span class='error-message'></span>
+                    <input name="Name" id='name' type='text' placeholder='Enter Your Name'>
+                </label>
+                <button id='step8Button' type='button'>NEXT</button>
+            </div>
+        </div>
+        <!--  END STEP 8  -->
+
+        <!--  BEGIN STEP 9  -->
+        <div id='step-9' class='steps-inner d-none'>
+            <div class='steps-title'>
+                <img src='assets/images/steps/step-9.svg' alt=''>
+                <h2>Ready For Your Results?</h2>
+                <h3 class='border-bottom'>Enter Your Mobile Number to Receive a Text Message When Your Report is
+                    Ready!</h3>
+                <h3>Your information is private and secure.</h3>
+            </div>
+            <div class='steps-form'>
+                <label>
+                    <span class='error-message'></span>
+                    <input name="Mobile Number" id='yourMobile' type='tel' placeholder='Enter Your Mobile Number'>
+                </label>
+                <button id='step9Button' type='button'>GET THE TRUE VALUE OF MY HOME</button>
+            </div>
+            <div class='notice-form'>
+                <h5>
+                    This is a kdetailed report that takes time to prepare for you. <br/>
+                    You have our guarantee it will be delivered in the next 24 hours.
+                </h5>
+            </div>
+        </div>
+        <!--  END STEP 9  -->
+    </form>
+
+    <button id='back' class='btn-back'>Back</button>
 </main>
-<footer class="footer">
-    <img src='./assets/images/back-to-call.png' alt='back-to-call' class='back-call'>
-    <div class='container'>
-        <h2>What Are You Waiting For? Let’s Sell Your Home Above Market Value!</h2>
-        <a href='#' class='button'>Book Your Free Strategy Call</a>
-        <p>
-            We have a limited number of appointments available and request that only individuals who are ready to take
-            action apply.
-        </p>
-    </div>
-</footer>
-<script src="./assets/js/home.js"></script>
+
+<script src='assets/js/vendors/jquery.js'></script>
+<!-- Google Maps JavaScript Library -->
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVXisMcN2lHYrm_l-lp7V52RG-IBBQxZ0&libraries=places"></script>
+<script src='assets/js/steps.js'></script>
+<script src='assets/js/stepsEmail.js'></script>
 </body>
 </html>
