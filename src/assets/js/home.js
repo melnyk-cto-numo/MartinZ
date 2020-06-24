@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     moreBtn.addEventListener('click', function () {
         if (this.innerHTML === 'More...') {
             this.innerHTML = '...less';
-            moreText.style.display = 'block'
+            moreText.style.display = 'inline'
         } else {
             this.innerHTML = 'More...';
             moreText.style.display = 'none'
