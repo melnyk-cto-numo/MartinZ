@@ -23,5 +23,5 @@
                 Mobile Number: " . $mobileNumber . "\r\n";
     $headers = "From: $emailAddress\r\nReply-to: $emailAddress\r\nContent-Type: text/plain; charset=utf-8\r\n";
 
-    $success = mail("melnyk.cto.numo@gmail.com", $subject, $message, $headers);
+    $success = mail("info@martinzielinski.com", $subject, $message, $headers);
     echo $success;
