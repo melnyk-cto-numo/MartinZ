@@ -231,7 +231,7 @@
     position:        absolute;
     object-fit:      cover;
     object-position: center center;
-    z-index:         1;
+    z-index:         0;
     width:           100%;
     height:          100%;
     opacity:         0.2;
@@ -386,6 +386,14 @@
   }
   .steps-form {
     margin-bottom: 2rem;
+  }
+}
+
+.steps {
+  .footer-menu {
+    max-width:      450px;
+    padding-top:    60px;
+    padding-bottom: 0;
   }
 }
 
