@@ -10,41 +10,41 @@ $("#step9Button").on('click', function () {
     const name = $("[name='Name']").val();
     const mobileNumber = $("[name='Mobile Number']").val();
 
+    if (mobileNumber !== '') {
+        $.ajax({
+            url: '../ajax/mail.php',
+            type: 'POST',
+            cache: false,
+            data: {
+                'emailAddress': emailAddress,
+                'kindOfProperty': kindOfProperty,
+                'lengthOfStay': lengthOfStay,
+                'homeConditionRate': homeConditionRate,
+                'neighborhoodRate': neighborhoodRate,
+                'streetAddress': streetAddress,
+                'unitNumber': unitNumber,
+                'sell': sell,
+                'name': name,
+                'mobileNumber': mobileNumber,
+            },
+            dataType: 'html',
+            beforeSend: function () {
+                $("#step1Button").prop("disabled", true);
+                console.log("Wait, data is being sent to the server");
+            },
+            success: function (data) {
+                if (!data) {
+                    console.log('There were errors, the message was not sent');
+                } else {
+                    // clear form fields
+                    $("#stepsForm").trigger("reset");
 
-    $.ajax({
-        url: '../ajax/mail.php',
-        type: 'POST',
-        cache: false,
-        data: {
-            'emailAddress': emailAddress,
-            'kindOfProperty': kindOfProperty,
-            'lengthOfStay': lengthOfStay,
-            'homeConditionRate': homeConditionRate,
-            'neighborhoodRate': neighborhoodRate,
-            'streetAddress': streetAddress,
-            'unitNumber': unitNumber,
-            'sell': sell,
-            'name': name,
-            'mobileNumber': mobileNumber,
-        },
-        dataType: 'html',
-        beforeSend: function () {
-            $("#step1Button").prop("disabled", true);
-            console.log("Wait, data is being sent to the server");
-        },
-        success: function (data) {
-            if (!data) {
-                console.log('There were errors, the message was not sent');
-            } else {
-                // clear form fields
-                $("#stepsForm").trigger("reset");
+                    window.location.href = "/thankyou";
+                    console.log('Your request has been sent');
 
-                window.location.href = "/thankyou";
-                console.log('Your request has been sent');
-
+                }
+                $("#step1Button").prop("disabled", false);
             }
-            $("#step1Button").prop("disabled", false);
-        }
-    });
-
+        });
+    }
 });
